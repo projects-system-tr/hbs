@@ -1,0 +1,29 @@
+{
+  "ad_soyad": "",
+  "oda_no": "C-Z07",
+  "giris_tarihi": "",
+  "iletisim": {
+    "kendisi": {
+      "ad": "",
+      "telefon": ""
+    },
+    "yakinlar": [
+      {
+        "ad": "",
+        "telefon": ""
+      },
+      {
+        "ad": "",
+        "telefon": ""
+      },
+      {
+        "ad": "",
+        "telefon": ""
+      }
+    ]
+  },
+  "ilaclar": [],
+  "hastaliklar": [],
+  "ameliyatlar": [],
+  "notlar": ""
+}
