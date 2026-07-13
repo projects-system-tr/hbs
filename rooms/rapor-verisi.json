@@ -33,6 +33,16 @@
           "Öğle",
           "Akşam"
         ]
+      },
+      {
+        "ad": "Lantus (İnsülin Glarjin)",
+        "dozaj": "3 Tablet",
+        "vakit": [
+          "Sabah",
+          "Öğle",
+          "Akşam",
+          "Gece"
+        ]
       }
     ]
   },
