@@ -33,9 +33,28 @@
         "Akşam",
         "Gece"
       ]
+    },
+    {
+      "ad": "Aspirin (Asetilsalisilik Asit)",
+      "dozaj": "1 Tablet",
+      "vakit": [
+        "Sabah",
+        "Öğle"
+      ]
+    },
+    {
+      "ad": "Eliquis (Apiksaban)",
+      "dozaj": "1 Tablet",
+      "vakit": [
+        "Öğle",
+        "Akşam"
+      ]
     }
   ],
-  "hastaliklar": [],
+  "hastaliklar": [
+    "KOAH (Kronik Obstrüktif Akciğer Hastalığı)",
+    "Tip 2 Diyabet (Şeker Hastalığı)"
+  ],
   "ameliyatlar": [],
   "notlar": ""
 }
