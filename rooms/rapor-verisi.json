@@ -209,10 +209,20 @@
   },
   {
     "oda_no": "A-Z01",
-    "ad_soyad": "",
-    "giris_tarihi": "",
-    "hastaliklar": [],
-    "ilaclar": []
+    "ad_soyad": "Gamze Nur Yıldırım",
+    "giris_tarihi": "21.05.2024",
+    "hastaliklar": [
+      "Gerilim Tipi Baş Ağrısı"
+    ],
+    "ilaclar": [
+      {
+        "ad": "Glucophage",
+        "dozaj": "1 Tablet",
+        "vakit": [
+          "Sabah"
+        ]
+      }
+    ]
   },
   {
     "oda_no": "A-Z02",
