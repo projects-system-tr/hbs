@@ -1,11 +1,11 @@
 {
-  "ad_soyad": "Turgut Ulusoy",
+  "ad_soyad": "",
   "oda_no": "A-102",
-  "giris_tarihi": "10.10.2000",
-  "tc_kimlik_no": "11111111111",
+  "giris_tarihi": "",
+  "tc_kimlik_no": "",
   "iletisim": {
     "kendisi": {
-      "ad": "Turgut",
+      "ad": "",
       "telefon": ""
     },
     "yakinlar": [
@@ -23,27 +23,8 @@
       }
     ]
   },
-  "ilaclar": [
-    {
-      "ad": "Parol (Parasetamol)",
-      "dozaj": "1 Tablet",
-      "vakit": [
-        "Sabah",
-        "Akşam"
-      ]
-    },
-    {
-      "ad": "Diamicron (Gliklazid)",
-      "dozaj": "1 Tablet",
-      "vakit": [
-        "Öğle"
-      ]
-    }
-  ],
-  "hastaliklar": [
-    "Gerilim Tipi Baş Ağrısı",
-    "Vertigo (Baş Dönmesi)"
-  ],
+  "ilaclar": [],
+  "hastaliklar": [],
   "ameliyatlar": [],
   "notlar": ""
 }
