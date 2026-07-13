@@ -1,11 +1,12 @@
 {
-  "ad_soyad": "",
+  "ad_soyad": "Gamze Nur Yıldırım",
   "oda_no": "A-Z01",
-  "giris_tarihi": "",
+  "giris_tarihi": "21.05.2024",
+  "tc_kimlik_no": "11111111111",
   "iletisim": {
     "kendisi": {
       "ad": "",
-      "telefon": ""
+      "telefon": "05319937433"
     },
     "yakinlar": [
       {
@@ -22,8 +23,18 @@
       }
     ]
   },
-  "ilaclar": [],
-  "hastaliklar": [],
+  "ilaclar": [
+    {
+      "ad": "Glucophage",
+      "dozaj": "1 Tablet",
+      "vakit": [
+        "Sabah"
+      ]
+    }
+  ],
+  "hastaliklar": [
+    "Gerilim Tipi Baş Ağrısı"
+  ],
   "ameliyatlar": [],
   "notlar": ""
 }
