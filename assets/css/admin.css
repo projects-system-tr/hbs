@@ -232,17 +232,44 @@ fieldset label:last-child { margin-bottom: 0; }
   display: flex; gap: 16px; flex-wrap: wrap; align-items: flex-end;
   margin-top: -4px;
 }
-.dozaj-vakit-satiri label { flex: 0 0 auto; min-width: 140px; }
-.vakit-secim { display: flex; flex-direction: column; gap: 8px; margin-bottom: 16px;}
-.vakit-butonlar { display: flex; gap: 8px; flex-wrap: wrap; }
+.dozaj-vakit-satiri label { 
+  flex: 0 0 auto; 
+  min-width: 140px; 
+}
+
+/* 1. Üst kapsayıcıyı yan yana (row) dizdik */
+.vakit-secim { 
+  display: flex; 
+  flex-direction: row; 
+  align-items: center;
+  gap: 8px; /* Label ile buton grubu arasındaki boşluk */
+  margin-bottom: 16px;
+}
+
+/* 2. 4 elemanın yan yana ip gibi dizilmesini sağladık ve aralarını daralttık */
+.vakit-butonlar { 
+  display: flex; 
+  flex-direction: row;
+  flex-wrap: nowrap; /* Elemanların asla alt satıra geçmemesini (ip gibi) garantiler */
+  gap: 6px; /* Elemanların kendi arasındaki boşluğu azalttık */
+}
+
+/* 3. Seçeneklerin içindeki boşlukları optimize ettik */
 .vakit-secenek {
+  display: flex; /* flex özelliklerinin çalışması için ekledik */
   flex-direction: row !important;
   align-items: center;
-  gap: 5px !important;
+  gap: 4px !important; /* Checkbox ile yazı arasındaki boşluğu azalttık */
   font-weight: 500 !important;
   font-size: 13.5px !important;
+  white-space: nowrap; /* Yazıların kırılıp alt satıra geçmesini engeller */
 }
-.vakit-secenek input { width: 15px; height: 15px; }
+
+.vakit-secenek input { 
+  width: 15px; 
+  height: 15px; 
+  margin: 0; /* Tarayıcının varsayılan dış boşluklarını sıfırladık */
+}
 
 .cip-liste { 
   display: flex; 
