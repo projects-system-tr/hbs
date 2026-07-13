@@ -226,77 +226,116 @@ fieldset label:last-child { margin-bottom: 0; }
 .admin-ust-cubuk { display: flex; gap: 8px; flex-wrap: wrap; }
 .sekme-aktif { background: var(--primer); color: #fff; border-color: var(--primer); }
 
-/* ---------- Gelişmiş Akıllı Arama & Seçim Satırı ---------- */
+/* ---------- Akıllı Arama & Dozaj Konteyner Paneli ---------- */
 .akilli-arama-sarici { 
   position: relative; 
 }
 
 .dozaj-vakit-satiri {
-  display: flex; 
-  gap: 20px; 
-  flex-wrap: wrap; 
-  align-items: flex-end;
-  margin-top: 8px;
-  background: var(--arka-plan-gri, #f8f9fa); /* Hafif bir arka plan paneli oluşturur */
-  padding: 16px;
+  display: flex;
+  flex-direction: column; /* Elemanları alt alta daha düzenli sıralamak için */
+  gap: 20px;
+  background: #ffffff;
+  padding: 20px;
   border-radius: 12px;
-  border: 1px solid var(--kenarlik-hafif, #e9ecef);
+  border: 1px solid var(--kenarlik-hafif, #e2e8f0);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); /* Hafif derinlik */
+  margin-top: 16px;
 }
 
-.dozaj-vakit-satiri label { 
-  flex: 0 0 auto; 
-  min-width: 140px; 
+/* Başlık Etiketleri */
+.dozaj-vakit-satiri label {
+  display: block;
   font-weight: 600;
-  color: var(--metin-koyu, #343a40);
+  color: var(--metin-koyu, #1e293b);
   font-size: 14px;
+  margin-bottom: 8px; /* İçerik ile başlık arası boşluk */
 }
 
-.vakit-secim { 
-  display: flex; 
-  flex-direction: column; 
-  gap: 8px; 
+/* ---------- Vakit / Tablet Seçim Alanı ---------- */
+.vakit-secim {
+  width: 100%;
 }
 
-.vakit-butonlar { 
-  display: flex; 
-  gap: 12px; 
-  flex-wrap: wrap; 
+.vakit-butonlar {
+  display: grid;
+  /* Seçenekleri yan yana eşit genişlikte dağıtır, ekran daralınca alta kayar */
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 12px;
+  width: 100%;
+  margin-bottom: 12px; /* Altındaki butondan net bir şekilde ayırır */
 }
 
-/* Seçenek kutularını modern buton tarzı etiketlere dönüştürme */
+/* Tablet Seçim Butonları */
 .vakit-secenek {
   display: flex !important;
-  flex-direction: row !important;
+  justify-content: center;
   align-items: center;
   gap: 8px !important;
-  font-weight: 500 !important;
+  font-weight: 600 !important;
   font-size: 13.5px !important;
-  background: #ffffff;
-  border: 1px solid #ced4da;
-  padding: 6px 14px;
-  border-radius: 20px;
+  background: #f8fafc;
+  border: 1.5px solid #e2e8f0;
+  padding: 10px 16px;
+  border-radius: 10px;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  user-select: none;
+  transition: all 0.2s ease;
+  text-align: center;
 }
 
-/* Hover ve Seçilme (Focus/Active) Durumları */
 .vakit-secenek:hover {
-  border-color: var(--primer, #007bff);
-  background: rgba(0, 123, 255, 0.02);
+  border-color: var(--primer, #3b82f6);
+  background: #f1f5f9;
 }
 
+/* Tablet Seçildiğinde (Aktif Durum) */
 .vakit-secenek:has(input:checked) {
-  background: var(--primer-tint, #e8f0fe);
-  border-color: var(--primer, #007bff);
-  color: var(--primer-koyu, #185abc);
+  background: var(--primer-tint, #eff6ff);
+  border-color: var(--primer, #3b82f6);
+  color: var(--primer-koyu, #1d4ed8);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15); /* Hafif parlama efekti */
 }
 
-.vakit-secenek input { 
-  width: 16px; 
-  height: 16px; 
+.vakit-secenek input {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  accent-color: var(--primer, #3b82f6);
+}
+
+/* ---------- İlacı Listeye Ekleme Butonu ---------- */
+/* Not: Sayfanızdaki butonun class'ı ne olursa olsun yakalaması için esnek bırakılmıştır */
+.ilac-ekle-buton, 
+.dozaj-vakit-satiri button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%; 
+  max-width: 200px;
+  padding: 10px 20px;
+  background: var(--primer, #3b82f6);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
   cursor: pointer;
-  accent-color: var(--primer, #007bff); /* Modern tarayıcılarda input rengini değiştirir */
+  transition: all 0.2s ease;
+  margin-top: 8px; /* Üstteki seçim alanından kaçış boşluğu */
+  align-self: flex-end; /* Butonu sağ tarafa yaslar */
+}
+
+.ilac-ekle-buton:hover,
+.dozaj-vakit-satiri button:hover {
+  background: var(--primer-koyu, #1d4ed8);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25);
+}
+
+.ilac-ekle-buton:active,
+.dozaj-vakit-satiri button:active {
+  transform: translateY(0);
 }
 
 /* ---------- Modern Çip (Tag) Listesi ---------- */
@@ -311,9 +350,9 @@ fieldset label:last-child { margin-bottom: 0; }
   display: flex; 
   align-items: center; 
   gap: 6px;
-  background: var(--primer-tint, #e8f0fe);
-  color: var(--primer-koyu, #185abc);
-  border: 1px solid rgba(0, 123, 255, 0.15);
+  background: var(--primer-tint, #eff6ff);
+  color: var(--primer-koyu, #1d4ed8);
+  border: 1px solid rgba(59, 130, 246, 0.15);
   border-radius: 30px;
   padding: 6px 10px 6px 16px;
   font-size: 13px;
@@ -331,7 +370,7 @@ fieldset label:last-child { margin-bottom: 0; }
   background: none; 
   border: none; 
   cursor: pointer;
-  color: var(--primer-koyu, #185abc); 
+  color: var(--primer-koyu, #1d4ed8); 
   font-weight: 600; 
   font-size: 16px;
   width: 22px; 
@@ -345,18 +384,26 @@ fieldset label:last-child { margin-bottom: 0; }
 }
 
 .cip-sil:hover { 
-  background: rgba(24, 90, 188, 0.15); 
-  color: #d93025; /* Silme hissini güçlendirmek için hoverda hafif kırmızımsı/canlı ton */
+  background: rgba(29, 78, 216, 0.15); 
+  color: #d93025; /* Silme esnasında kırmızımsı geri bildirim */
 }
 
 /* Boş Liste Durumu */
 .cip-liste:empty::before {
-  content: "Henüz bir öğe eklenmedi.";
+  content: "Henüz eklenmedi.";
   color: var(--metin-soluk, #6c757d); 
   font-size: 13px; 
   font-style: italic;
   display: block;
   padding: 8px 4px;
+}
+
+/* Responsive Düzenleme */
+@media (max-width: 480px) {
+  .ilac-ekle-buton, 
+  .dozaj-vakit-satiri button {
+    max-width: 100%; /* Mobilde butona basmayı kolaylaştırmak için tam genişlik yapar */
+  }
 }
 /* ---------- Toplu Raporlar tablosu ---------- */
 .rapor-filtre-satiri {
