@@ -391,3 +391,36 @@ main#app {
   font-size: 12px;
   color: var(--metin-soluk);
 }
+/* QR Kodu İndir Butonu Genel Tasarımı */
+.qr-download-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: #8a1538; /* Sitedeki kurumsal bordo/kırmızı tonu */
+    color: #ffffff !important;
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none !important;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 12px;
+    width: 100%; /* Bulunduğu sütunu kaplaması için (Mobil uyumlu) */
+    max-width: 220px; /* Çok fazla uzamaması için sınır */
+}
+
+/* Fareyle üzerine gelindiğinde (Hover durumu) */
+.qr-download-btn:hover {
+    background-color: #6b0f2a; /* Bir ton koyu bordo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Butona tıklandığı anki efekt */
+.qr-download-btn:active {
+    transform: scale(0.98);
+}
