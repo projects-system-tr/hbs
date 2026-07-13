@@ -233,8 +233,8 @@ fieldset label:last-child { margin-bottom: 0; }
   margin-top: -4px;
 }
 .dozaj-vakit-satiri label { flex: 0 0 auto; min-width: 140px; }
-.vakit-secim { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px;}
-.vakit-butonlar { display: flex; gap: 10px; flex-wrap: wrap; }
+.vakit-secim { display: flex; flex-direction: column; gap: 8px; margin-bottom: 16px;}
+.vakit-butonlar { display: flex; gap: 8px; flex-wrap: wrap; }
 .vakit-secenek {
   flex-direction: row !important;
   align-items: center;
