@@ -226,33 +226,34 @@ fieldset label:last-child { margin-bottom: 0; }
 .admin-ust-cubuk { display: flex; gap: 8px; flex-wrap: wrap; }
 .sekme-aktif { background: var(--primer); color: #fff; border-color: var(--primer); }
 
-/* ---------- Akıllı Arama & Dozaj Konteyner Paneli ---------- */
+/* ---------- Akıllı Arama + Çip Listesi (HBS Admin Uyumlu) ---------- */
 .akilli-arama-sarici { 
   position: relative; 
 }
 
+/* Genel forma uyumlu, kibar ve kompakt panel satırı */
 .dozaj-vakit-satiri {
   display: flex;
-  align-items: center; /* Elemanları dikeyde hizalar, şekilsiz büyümeyi önler */
-  gap: 16px;
+  align-items: center;
+  gap: 15px;
   flex-wrap: wrap;
-  background: #ffffff;
-  padding: 12px 16px; /* İç boşlukları daraltarak alanı küçülttük */
-  border-radius: 10px;
-  border: 1px solid var(--kenarlik-hafif, #e2e8f0);
-  margin-top: 12px;
+  background: #fdfdfd;
+  padding: 10px 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px; /* Sitedeki form input köşeleriyle uyumlu */
+  margin-top: 10px;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.02);
 }
 
-/* Başlık Etiketleri (Örn: "Dozaj Vakti:") */
+/* Sitedeki standart form etiketleri tarzı */
 .dozaj-vakit-satiri label {
   font-weight: 600;
-  color: var(--metin-koyu, #334155);
-  font-size: 13.5px;
+  color: #495057;
+  font-size: 13px;
   margin: 0;
   white-space: nowrap;
 }
 
-/* ---------- Kibar & Minimal Tablet Seçim Alanı ---------- */
 .vakit-secim {
   display: flex;
   align-items: center;
@@ -260,36 +261,37 @@ fieldset label:last-child { margin-bottom: 0; }
 
 .vakit-butonlar {
   display: flex;
-  gap: 8px; /* Butonlar arası kibar boşluk */
+  gap: 6px;
   flex-wrap: wrap;
 }
 
-/* Devasa kutular yerine kompakt, yuvarlatılmış modern seçim butonları */
+/* Sitedeki admin paneli buton ve input kibarlığına uygun seçim alanları */
 .vakit-secenek {
   display: inline-flex !important;
   align-items: center;
   gap: 6px !important;
   font-weight: 500 !important;
   font-size: 13px !important;
-  background: #f8fafc;
-  border: 1px solid #cbd5e1;
-  padding: 6px 14px;
-  border-radius: 999px; /* Tam yuvarlak (pill-style) modern görünüm */
+  background: #ffffff;
+  border: 1px solid #ced4da;
+  padding: 5px 12px;
+  border-radius: 4px; /* Yuvarlak hatlar yerine site bütününe uygun hafif kavis */
   cursor: pointer;
-  transition: all 0.15s ease;
+  transition: all 0.15s ease-in-out;
   user-select: none;
+  color: #495057;
 }
 
 .vakit-secenek:hover {
-  border-color: var(--primer, #3b82f6);
-  background: #f1f5f9;
+  background: #f8f9fa;
+  border-color: #b5bbc1;
 }
 
-/* Seçildiğinde Zarifçe Renk Değiştirme */
+/* Aktif olduğunda sitenin kendi mavi tonu ve hafif border vurgusu */
 .vakit-secenek:has(input:checked) {
-  background: var(--primer-tint, #eff6ff);
-  border-color: var(--primer, #3b82f6);
-  color: var(--primer-koyu, #1d4ed8);
+  background: #e7f1ff;
+  border-color: #86b7fe;
+  color: #0c63e4;
   font-weight: 600 !important;
 }
 
@@ -297,99 +299,99 @@ fieldset label:last-child { margin-bottom: 0; }
   width: 14px;
   height: 14px;
   margin: 0;
-  accent-color: var(--primer, #3b82f6);
   cursor: pointer;
 }
 
-/* ---------- İlacı Listeye Ekleme Butonu ---------- */
+/* Sitedeki "Kaydet/Ekle" butonlarının küçük (btn-sm) yapısıyla birebir uyumlu buton */
 .ilac-ekle-buton, 
 .dozaj-vakit-satiri button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 6px 16px; /* Kompakt boyut */
-  background: var(--primer, #3b82f6);
+  padding: 5px 14px;
+  background: #0d6efd; /* Standart Bootstrap / Admin Primer Mavi */
   color: #ffffff;
-  border: none;
-  border-radius: 6px;
+  border: 1px solid #0d6efd;
+  border-radius: 4px;
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 500;
   cursor: pointer;
-  transition: all 0.15s ease;
-  margin-left: auto; /* Geniş ekranlarda butonu en sağa kibarca iter */
-  height: 32px; /* Input yükseklikleriyle uyumlu */
+  transition: background-color 0.15s ease-in-out;
+  margin-left: auto; /* Sağ köşede nizami durması için */
+  height: 31px;
 }
 
 .ilac-ekle-buton:hover,
 .dozaj-vakit-satiri button:hover {
-  background: var(--primer-koyu, #1d4ed8);
+  background: #0b5ed7;
+  border-color: #0a58ca;
 }
 
-/* ---------- Modern Çip (Tag) Listesi ---------- */
+/* ---------- Sitenin Genel Küçüklüğüne Uyarlanmış Çipler ---------- */
 .cip-liste { 
   display: flex; 
   flex-wrap: wrap; 
-  gap: 8px; 
-  margin: 12px 0 6px; 
+  gap: 6px; 
+  margin: 10px 0 4px; 
 }
 
 .cip {
   display: inline-flex; 
   align-items: center; 
   gap: 6px;
-  background: var(--primer-tint, #eff6ff);
-  color: var(--primer-koyu, #1d4ed8);
-  border: 1px solid rgba(59, 130, 246, 0.12);
-  border-radius: 999px;
-  padding: 5px 8px 5px 12px;
-  font-size: 12.5px;
-  font-weight: 600;
+  background: #f1f3f5;
+  color: #212529;
+  border: 1px solid #dee2e6;
+  border-radius: 4px; /* Yuvarlak sırıttığı için sitenin badge yapısına çekildi */
+  padding: 4px 8px 4px 10px;
+  font-size: 12px;
+  font-weight: 500;
 }
 
 .cip-sil {
   background: none; 
   border: none; 
   cursor: pointer;
-  color: var(--primer-koyu, #1d4ed8); 
-  font-weight: 600; 
-  font-size: 14px;
-  width: 18px; 
-  height: 18px; 
-  border-radius: 50%;
+  color: #6c757d; 
+  font-weight: 700; 
+  font-size: 13px;
+  width: 16px; 
+  height: 16px; 
+  border-radius: 3px;
   display: flex; 
   align-items: center; 
   justify-content: center;
-  transition: all 0.15s ease;
+  margin-left: 2px;
+  transition: all 0.1s ease;
 }
 
 .cip-sil:hover { 
-  background: rgba(29, 78, 216, 0.12); 
-  color: #ef4444; 
+  background: #e9ecef; 
+  color: #dc3545; 
 }
 
 /* Boş Liste Durumu */
 .cip-liste:empty::before {
   content: "Henüz eklenmedi.";
-  color: var(--metin-soluk, #94a3b8); 
+  color: #6c757d; 
   font-size: 12.5px; 
   font-style: italic;
   display: block;
-  padding: 4px 0;
+  padding: 2px 0;
 }
 
-/* Mobil Ekranlar İçin Esneklik */
-@media (max-width: 640px) {
+/* Mobil Ekran Kıvrılması */
+@media (max-width: 768px) {
   .dozaj-vakit-satiri {
     flex-direction: column;
     align-items: flex-start;
-    gap: 12px;
+    gap: 10px;
   }
   .ilac-ekle-buton, 
   .dozaj-vakit-satiri button {
     margin-left: 0;
     width: 100%;
   }
-}
 }
 /* ---------- Toplu Raporlar tablosu ---------- */
 .rapor-filtre-satiri {
