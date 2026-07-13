@@ -4,7 +4,18 @@
     "ad_soyad": "",
     "giris_tarihi": "",
     "hastaliklar": [],
-    "ilaclar": []
+    "ilaclar": [
+      {
+        "ad": "Parol (Parasetamol)",
+        "dozaj": "1 Tablet",
+        "vakit": [
+          "Sabah",
+          "Öğle",
+          "Akşam",
+          "Gece"
+        ]
+      }
+    ]
   },
   {
     "oda_no": "A-102",
