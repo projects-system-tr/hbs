@@ -231,21 +231,21 @@ fieldset label:last-child { margin-bottom: 0; }
   position: relative; 
 }
 
-/* Tüm elemanları satırda nizami hizalayan ana kapsayıcı */
+/* Elemanları dikeyde ortalayan ana kapsayıcı */
 .dozaj-vakit-satiri {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 20px;
   flex-wrap: wrap;
   background: #f8f9fa; 
-  padding: 12px 16px;
+  padding: 16px;
   border: 1px solid #dee2e6;
   border-radius: 4px;
   margin-top: 10px;
-  margin-bottom: 20px; /* Alttaki butonlar ve elemanlarla kesişmeyi önleyen kritik boşluk */
+  margin-bottom: 20px;
 }
 
-/* "Dozaj Vakti:" gibi başlık etiketleri */
+/* "Dozaj" ve "Vakit" gibi başlık etiketleri */
 .dozaj-vakit-satiri label {
   font-weight: 600;
   color: #495057;
@@ -254,14 +254,21 @@ fieldset label:last-child { margin-bottom: 0; }
   white-space: nowrap;
 }
 
+/* Dozaj Seçim Grubu */
+.dozaj-alan-grup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
 /* Dozaj Select Sınıfı (id="f-ilac-dozaj" alanına class="dozaj-select" ekleyin) */
 .dozaj-select {
   display: inline-block;
   width: auto;
-  min-width: 120px;
-  height: 32px;
-  padding: 4px 30px 4px 10px;
-  font-size: 13px;
+  min-width: 140px;
+  height: 36px;
+  padding: 4px 30px 4px 12px;
+  font-size: 13.5px;
   font-weight: 500;
   line-height: 1.5;
   color: #495057;
@@ -283,34 +290,36 @@ fieldset label:last-child { margin-bottom: 0; }
   box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
 }
 
-/* Vakit Seçim Alanı Gruplayıcı */
+/* Vakit Seçim Grubu */
 .vakit-secim {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  gap: 6px;
 }
 
-/* Buton grubu mantığı: Butonlar birbirine yapışır, kenarlıklar çakışmaz */
+/* Buton grubu yan yana nizami dizilim */
 .vakit-butonlar {
   display: flex;
   flex-wrap: nowrap; 
 }
 
-/* Sitenin kurumsal kimliğine tam oturan, net sınırları olan vakit butonları */
+/* İç içe geçmeyi ve taşmayı düzelten dikey hizalanmış temiz butonlar */
 .vakit-secenek {
-  display: inline-flex !important;
-  align-items: center;
-  justify-content: center;
+  display: flex !important;
+  flex-direction: column !important; /* Checkbox üstte, yazı altta olacak şekilde dikey hizalama */
+  align-items: center !important;
+  justify-content: center !important;
   gap: 6px !important;
   font-weight: 500 !important;
-  font-size: 12.5px !important;
+  font-size: 13px !important;
   background: #ffffff;
   border: 1px solid #ced4da;
-  padding: 0 14px;
+  padding: 8px 16px !important; /* İçeriğin rahat nefes alması için padding genişletildi */
   cursor: pointer;
   transition: all 0.15s ease-in-out;
   user-select: none;
   color: #495057;
-  height: 32px; 
+  height: auto !important; /* Yüksekliği serbest bırakarak taşmayı önledik */
   margin-left: -1px; 
   white-space: nowrap; 
 }
@@ -329,11 +338,11 @@ fieldset label:last-child { margin-bottom: 0; }
 
 .vakit-secenek:hover {
   background: #f8f9fa;
-  border-color: #b5bbc1;
+  border-color: #adb5bd;
   z-index: 2; 
 }
 
-/* Seçildiğinde aktifleşen durum */
+/* Seçildiğinde aktifleşen kurumsal mavi durum */
 .vakit-secenek:has(input:checked) {
   background: #e7f1ff;
   border-color: #0d6efd;
@@ -343,13 +352,14 @@ fieldset label:last-child { margin-bottom: 0; }
 }
 
 .vakit-secenek input {
-  width: 13px;
-  height: 13px;
-  margin: 0;
+  width: 14px;
+  height: 14px;
+  margin: 0 !important;
   cursor: pointer;
+  display: inline-block !important;
 }
 
-/* Sitenin kendi küçük buton (btn-sm) tasarımıyla birebir uyumlu ekleme butonu */
+/* Ekleme Butonu */
 .ilac-ekle-buton, 
 .dozaj-vakit-satiri button {
   display: inline-flex;
@@ -365,7 +375,8 @@ fieldset label:last-child { margin-bottom: 0; }
   cursor: pointer;
   transition: background-color 0.15s ease;
   margin-left: auto; 
-  height: 32px; 
+  height: 36px; /* Select kutusu ile hizalandı */
+  align-self: flex-end; /* Satırın en altında nizami durması için */
 }
 
 .ilac-ekle-buton:hover,
@@ -374,12 +385,12 @@ fieldset label:last-child { margin-bottom: 0; }
   border-color: #0a58ca;
 }
 
-/* ---------- Temiz Liste Çipleri ---------- */
+/* ---------- Liste Çipleri ---------- */
 .cip-liste { 
   display: flex; 
   flex-wrap: wrap; 
   gap: 6px; 
-  margin: 12px 0 16px; /* Altındaki diğer kaydet butonlarıyla çakışmaması için alt boşluk artırıldı */
+  margin: 12px 0 16px; 
 }
 
 .cip {
@@ -424,16 +435,15 @@ fieldset label:last-child { margin-bottom: 0; }
   font-style: italic;
   display: block;
   padding: 2px 0;
-  margin-bottom: 12px; /* Liste boşken de alttan boşluk bırakması için */
+  margin-bottom: 12px; 
 }
 
-/* Mobil için kırılma düzeni */
+/* Mobil Cihazlar İçin */
 @media (max-width: 768px) {
   .dozaj-vakit-satiri {
     flex-direction: column;
     align-items: flex-start;
-    gap: 12px;
-    margin-bottom: 16px;
+    gap: 14px;
   }
   .dozaj-select,
   .vakit-secim,
@@ -451,6 +461,9 @@ fieldset label:last-child { margin-bottom: 0; }
     margin-left: 0;
     margin-top: -1px;
     border-radius: 4px !important; 
+    flex-direction: row !important; /* Mobilde yan yana daha şık durması için */
+    justify-content: flex-start !important;
+    padding: 10px 14px !important;
   }
 }
 /* ---------- Toplu Raporlar tablosu ---------- */
