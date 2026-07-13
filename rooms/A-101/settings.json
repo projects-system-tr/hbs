@@ -65,6 +65,8 @@
     "KOAH (Kronik Obstrüktif Akciğer Hastalığı)",
     "Tip 2 Diyabet (Şeker Hastalığı)"
   ],
-  "ameliyatlar": [],
+  "ameliyatlar": [
+    "Septoplasti"
+  ],
   "notlar": ""
 }
