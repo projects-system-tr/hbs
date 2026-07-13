@@ -2,10 +2,11 @@
   "ad_soyad": "",
   "oda_no": "A-101",
   "giris_tarihi": "",
+  "tc_kimlik_no": "",
   "iletisim": {
     "kendisi": {
-      "ad": "",
-      "telefon": ""
+      "ad": "Ahmet ANDİÇ",
+      "telefon": "05319937433"
     },
     "yakinlar": [
       {
@@ -22,7 +23,18 @@
       }
     ]
   },
-  "ilaclar": [],
+  "ilaclar": [
+    {
+      "ad": "Parol (Parasetamol)",
+      "dozaj": "1 Tablet",
+      "vakit": [
+        "Sabah",
+        "Öğle",
+        "Akşam",
+        "Gece"
+      ]
+    }
+  ],
   "hastaliklar": [],
   "ameliyatlar": [],
   "notlar": ""
