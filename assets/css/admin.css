@@ -235,13 +235,14 @@ fieldset label:last-child { margin-bottom: 0; }
 .dozaj-vakit-satiri {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 16px;
   flex-wrap: wrap;
-  background: #f8f9fa; /* Sitenin hafif gri panel tonu */
-  padding: 10px 14px;
+  background: #f8f9fa; 
+  padding: 12px 16px;
   border: 1px solid #dee2e6;
   border-radius: 4px;
   margin-top: 10px;
+  margin-bottom: 20px; /* Alttaki butonlar ve elemanlarla kesişmeyi önleyen kritik boşluk */
 }
 
 /* "Dozaj Vakti:" gibi başlık etiketleri */
@@ -253,12 +254,12 @@ fieldset label:last-child { margin-bottom: 0; }
   white-space: nowrap;
 }
 
-/* Yeni Dozaj Select Sınıfı (id="f-ilac-dozaj" alanına class="dozaj-select" ekleyin) */
+/* Dozaj Select Sınıfı (id="f-ilac-dozaj" alanına class="dozaj-select" ekleyin) */
 .dozaj-select {
   display: inline-block;
   width: auto;
-  min-width: 110px;
-  height: 31px;
+  min-width: 120px;
+  height: 32px;
   padding: 4px 30px 4px 10px;
   font-size: 13px;
   font-weight: 500;
@@ -272,7 +273,7 @@ fieldset label:last-child { margin-bottom: 0; }
   border: 1px solid #ced4da;
   border-radius: 4px;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  appearance: none; /* Varsayılan çirkin ok işaretini kaldırır */
+  appearance: none; 
   cursor: pointer;
 }
 
@@ -288,45 +289,59 @@ fieldset label:last-child { margin-bottom: 0; }
   align-items: center;
 }
 
-/* Yan yana buton grubu mantığı */
+/* Buton grubu mantığı: Butonlar birbirine yapışır, kenarlıklar çakışmaz */
 .vakit-butonlar {
   display: flex;
-  gap: 4px; /* Butonları birbirine yakın tutarak grup algısı yaratır */
+  flex-wrap: nowrap; 
 }
 
-/* Berbat görünümü düzelten temiz, düzgün vakit seçim butonları */
+/* Sitenin kurumsal kimliğine tam oturan, net sınırları olan vakit butonları */
 .vakit-secenek {
   display: inline-flex !important;
   align-items: center;
+  justify-content: center;
   gap: 6px !important;
   font-weight: 500 !important;
   font-size: 12.5px !important;
   background: #ffffff;
   border: 1px solid #ced4da;
-  padding: 5px 12px;
-  border-radius: 4px;
+  padding: 0 14px;
   cursor: pointer;
-  transition: all 0.15s ease;
+  transition: all 0.15s ease-in-out;
   user-select: none;
   color: #495057;
-  height: 31px; /* Select ve normal butonla tam eşit yükseklik */
+  height: 32px; 
+  margin-left: -1px; 
+  white-space: nowrap; 
+}
+
+/* Sıralı butonların köşelerini nizami yuvarlama */
+.vakit-butonlar .vakit-secenek:first-child {
+  margin-left: 0;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.vakit-butonlar .vakit-secenek:last-child {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
 }
 
 .vakit-secenek:hover {
-  background: #f1f3f5;
-  border-color: #adb5bd;
+  background: #f8f9fa;
+  border-color: #b5bbc1;
+  z-index: 2; 
 }
 
-/* Seçildiğinde sitenin kurumsal mavisine bürünen aktif durum */
+/* Seçildiğinde aktifleşen durum */
 .vakit-secenek:has(input:checked) {
   background: #e7f1ff;
   border-color: #0d6efd;
   color: #0d6efd;
   font-weight: 600 !important;
-  box-shadow: inset 0 1px 2px rgba(13, 110, 253, 0.05);
+  z-index: 3; 
 }
 
-/* İçteki checkbox kutusunu gizlemek isterseniz veya daha kibar yapmak için */
 .vakit-secenek input {
   width: 13px;
   height: 13px;
@@ -334,14 +349,14 @@ fieldset label:last-child { margin-bottom: 0; }
   cursor: pointer;
 }
 
-/* Sitenin kendi küçük buton (btn-sm) tasarımına eş değer ekleme butonu */
+/* Sitenin kendi küçük buton (btn-sm) tasarımıyla birebir uyumlu ekleme butonu */
 .ilac-ekle-buton, 
 .dozaj-vakit-satiri button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0 14px;
-  background: #0d6efd; /* Sitenin ana mavi tonu */
+  padding: 0 16px;
+  background: #0d6efd; 
   color: #ffffff;
   border: 1px solid #0d6efd;
   border-radius: 4px;
@@ -349,8 +364,8 @@ fieldset label:last-child { margin-bottom: 0; }
   font-weight: 500;
   cursor: pointer;
   transition: background-color 0.15s ease;
-  margin-left: auto; /* Sağ köşeye kusursuzca hizalar */
-  height: 31px; /* Çizgiyi bozmamak için yükseklik sabitlendi */
+  margin-left: auto; 
+  height: 32px; 
 }
 
 .ilac-ekle-buton:hover,
@@ -364,7 +379,7 @@ fieldset label:last-child { margin-bottom: 0; }
   display: flex; 
   flex-wrap: wrap; 
   gap: 6px; 
-  margin: 10px 0 4px; 
+  margin: 12px 0 16px; /* Altındaki diğer kaydet butonlarıyla çakışmaması için alt boşluk artırıldı */
 }
 
 .cip {
@@ -409,6 +424,7 @@ fieldset label:last-child { margin-bottom: 0; }
   font-style: italic;
   display: block;
   padding: 2px 0;
+  margin-bottom: 12px; /* Liste boşken de alttan boşluk bırakması için */
 }
 
 /* Mobil için kırılma düzeni */
@@ -416,19 +432,25 @@ fieldset label:last-child { margin-bottom: 0; }
   .dozaj-vakit-satiri {
     flex-direction: column;
     align-items: flex-start;
-    gap: 10px;
+    gap: 12px;
+    margin-bottom: 16px;
   }
   .dozaj-select,
-  .vakit-secenek,
+  .vakit-secim,
+  .vakit-butonlar,
   .ilac-ekle-buton, 
   .dozaj-vakit-satiri button {
     width: 100%;
     margin-left: 0;
   }
   .vakit-butonlar {
-    width: 100%;
     flex-direction: column;
-    gap: 5px;
+  }
+  .vakit-secenek {
+    width: 100%;
+    margin-left: 0;
+    margin-top: -1px;
+    border-radius: 4px !important; 
   }
 }
 /* ---------- Toplu Raporlar tablosu ---------- */
