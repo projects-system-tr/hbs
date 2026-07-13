@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0">
+<title>Yönetim Paneli | Sivas Huzurevi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/admin.css">
+<link rel="icon" href="assets/favicon.ico">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="kurum-satir">
+    <img src="assets/logo.svg" alt="" class="kurum-logo" onerror="this.style.display='none'">
+    <div class="kurum-metin">
+      <p class="kurum-ust">T.C. Aile ve Sosyal Hizmetler Bakanlığı</p>
+      <h1 class="kurum-baslik">Sivas Huzurevi — Yönetim Paneli</h1>
+    </div>
+  </div>
+</header>
+
+<div class="admin-ust-cubuk">
+  <button type="button" id="sekme-duzenle" class="kucuk-buton sekme-aktif">Oda Düzenle</button>
+  <button type="button" id="sekme-raporlar" class="kucuk-buton">Toplu Raporlar</button>
+  <a href="index.html" class="kucuk-buton">🏠 Ana Sayfaya Git</a>
+</div>
+
+<main id="admin-app">
+
+  <!-- 1) Bağlantı ayarları -->
+  <section id="baglanti-paneli" class="panel admin-panel">
+    <h2>GitHub Bağlantısı</h2>
+    <p class="admin-aciklama">
+      Bu panel, girdiğiniz bilgileri doğrudan GitHub deponuza commit olarak
+      kaydeder. Sunucu yoktur — her kayıt, sizin adınıza atılmış bir GitHub
+      commit'idir.
+    </p>
+
+    <div class="uyari uyari-guvenlik">
+      <strong>Güvenlik:</strong> Kullanacağınız token, yalnızca bu tarayıcı
+      sekmesinde kalır; hiçbir yere kaydedilmez/gönderilmez (isterseniz
+      aşağıdaki kutuyla bu cihazda hatırlanmasını sağlayabilirsiniz).
+      Token oluştururken <strong>Fine-grained personal access token</strong>
+      kullanın, yalnızca bu depoyu seçin ve yalnızca
+      <strong>Contents: Read and write</strong> iznini verin. Bu token'ı
+      kimseyle paylaşmayın.
+    </div>
+
+    <form id="baglanti-form">
+      <label>GitHub Kullanıcı Adı / Organizasyon
+        <input type="text" id="gh-owner" placeholder="örn: sivashuzurevi" required>
+      </label>
+      <label>Depo (Repo) Adı
+        <input type="text" id="gh-repo" placeholder="örn: sakin-bilgi-sistemi" required>
+      </label>
+      <label>Dal (Branch)
+        <input type="text" id="gh-branch" value="main" required>
+      </label>
+      <label>Erişim Token'ı (Personal Access Token)
+        <input type="password" id="gh-token" placeholder="github_pat_..." required>
+      </label>
+      <label class="hatirla-satiri">
+        <input type="checkbox" id="gh-hatirla">
+        Token'ı bu cihazda hatırla (paylaşılan bilgisayarda önerilmez)
+      </label>
+      <button type="submit" id="baglan-buton">Bağlan</button>
+    </form>
+
+    <p id="baglanti-durum" class="durum-mesaji hidden"></p>
+  </section>
+
+  <!-- 2) Oda arama -->
+  <section id="oda-secim-paneli" class="panel admin-panel hidden">
+    <div class="panel-ust-satir">
+      <h2>Oda Seç</h2>
+      <button type="button" id="baglanti-degistir" class="kucuk-buton">Bağlantıyı Değiştir</button>
+    </div>
+    <div class="arama-kutu-sarici">
+      <input type="text" id="admin-oda-input" placeholder="Oda kodu veya isim yazın… (örn: A-101, Ahmet)" autocomplete="off">
+      <div id="admin-oneriler" class="oneri-liste hidden" role="listbox"></div>
+    </div>
+  </section>
+
+  <!-- 3) Düzenleme formu -->
+  <section id="duzenle-paneli" class="panel admin-panel hidden">
+    <div class="panel-ust-satir">
+      <h2 id="duzenle-baslik">Oda Bilgilerini Düzenle</h2>
+      <button type="button" id="secimi-temizle" class="kucuk-buton">← Oda Seçimine Dön</button>
+    </div>
+
+    <form id="duzenle-form">
+
+      <fieldset>
+        <legend>Kimlik Bilgileri</legend>
+        <label>Ad Soyad
+          <input type="text" id="f-ad-soyad">
+        </label>
+        <label>Giriş Tarihi
+          <input type="text" id="f-giris-tarihi" placeholder="GG.AA.YYYY">
+        </label>
+        <label>T.C. Kimlik No <span class="ipucu">(hassas veri — dikkatli girin)</span>
+          <input type="text" id="f-tc-kimlik-no" inputmode="numeric" maxlength="11" placeholder="11 haneli T.C. Kimlik No">
+        </label>
+        <label>Fotoğraf
+          <input type="file" id="f-foto" accept="image/jpeg,image/png">
+        </label>
+        <div class="foto-onizleme-satir">
+          <img id="f-foto-onizleme" alt="Mevcut fotoğraf" class="hidden">
+          <span id="f-foto-durum" class="admin-aciklama"></span>
+        </div>
+        <div id="kirpma-panel" class="kirpma-panel hidden">
+          <div class="kirpma-alan">
+            <canvas id="kirpma-canvas" width="320" height="320"></canvas>
+          </div>
+          <label class="kirpma-zoom-satir">
+            Yakınlaştır
+            <input type="range" id="kirpma-zoom" min="1" max="3" step="0.001" value="1">
+          </label>
+          <div class="kirpma-butonlar">
+            <button type="button" id="kirpma-iptal" class="kucuk-buton">İptal</button>
+            <button type="button" id="kirpma-uygula" class="kucuk-buton kucuk-buton-birincil">Uygula</button>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>İletişim Bilgileri</legend>
+        <label>Sakinin Kendi Adı
+          <input type="text" id="f-kendisi-ad">
+        </label>
+        <label>Sakinin Kendi Telefonu
+          <input type="tel" id="f-kendisi-tel" placeholder="05XXXXXXXXX">
+        </label>
+        <div class="yakin-blok">
+          <label>Yakını 1 — Ad (Yakınlık Derecesi)
+            <input type="text" id="f-yakin1-ad" placeholder="örn: Mehmet Yılmaz (Oğlu)">
+          </label>
+          <label>Yakını 1 — Telefon
+            <input type="tel" id="f-yakin1-tel" placeholder="05XXXXXXXXX">
+          </label>
+        </div>
+        <div class="yakin-blok">
+          <label>Yakını 2 — Ad (Yakınlık Derecesi)
+            <input type="text" id="f-yakin2-ad">
+          </label>
+          <label>Yakını 2 — Telefon
+            <input type="tel" id="f-yakin2-tel">
+          </label>
+        </div>
+        <div class="yakin-blok">
+          <label>Yakını 3 — Ad (Yakınlık Derecesi)
+            <input type="text" id="f-yakin3-ad">
+          </label>
+          <label>Yakını 3 — Telefon
+            <input type="tel" id="f-yakin3-tel">
+          </label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Sağlık Bilgileri</legend>
+        <p class="admin-aciklama" style="margin-top:-4px">Öneri listesi yalnızca hızlı giriş içindir, resmi bir ilaç veritabanı değildir — listede olmayan bir isim de yazıp ekleyebilirsiniz.</p>
+
+        <label>İlaç Ekle <span class="ipucu">(yazarken listeden seçin veya doğrudan yeni isim yazıp Ekle'ye basın)</span>
+          <div class="akilli-arama-sarici">
+            <input type="text" id="f-ilac-arama" placeholder="İlaç adı yazın…" autocomplete="off">
+            <div id="ilac-oneriler" class="oneri-liste hidden" role="listbox"></div>
+          </div>
+        </label>
+        <div class="dozaj-vakit-satiri">
+          <label>Dozaj
+            <select id="f-ilac-dozaj">
+              <option value="0,5 Tablet">0,5 Tablet</option>
+              <option value="1 Tablet" selected>1 Tablet</option>
+              <option value="2 Tablet">2 Tablet</option>
+              <option value="3 Tablet">3 Tablet</option>
+            </select>
+          </label>
+          <div class="vakit-secim">
+            <span class="ipucu">Vakit</span>
+            <div class="vakit-butonlar">
+              <label class="vakit-secenek"><input type="checkbox" value="Sabah"> Sabah</label>
+              <label class="vakit-secenek"><input type="checkbox" value="Öğle"> Öğle</label>
+              <label class="vakit-secenek"><input type="checkbox" value="Akşam"> Akşam</label>
+              <label class="vakit-secenek"><input type="checkbox" value="Gece"> Gece</label>
+            </div>
+          </div>
+        </div>
+        <button type="button" id="ilac-ekle-buton" class="kucuk-buton kucuk-buton-birincil">+ İlacı Listeye Ekle</button>
+        <div id="ilac-cip-liste" class="cip-liste"></div>
+
+        <label>Hastalık Ekle <span class="ipucu">(yazarken listeden seçin veya yeni tanı yazıp Ekle'ye basın)</span>
+          <div class="akilli-arama-sarici">
+            <input type="text" id="f-hastalik-arama" placeholder="Hastalık/tanı yazın…" autocomplete="off">
+            <div id="hastalik-oneriler" class="oneri-liste hidden" role="listbox"></div>
+          </div>
+        </label>
+        <button type="button" id="hastalik-ekle-buton" class="kucuk-buton kucuk-buton-birincil">+ Hastalığı Listeye Ekle</button>
+        <div id="hastalik-cip-liste" class="cip-liste"></div>
+
+        <label>Geçmiş Ameliyatlar <span class="ipucu">(her satıra bir kayıt)</span>
+          <textarea id="f-ameliyatlar" rows="3" placeholder="2018 - Katarakt ameliyatı"></textarea>
+        </label>
+        <label>Notlar
+          <textarea id="f-notlar" rows="3"></textarea>
+        </label>
+      </fieldset>
+
+      <div class="form-alt-butonlar">
+        <button type="submit" id="kaydet-buton">Kaydet</button>
+        <button type="button" id="sil-buton" class="tehlike-buton">Sakin Bilgilerini Sil</button>
+      </div>
+      <p id="kaydet-durum" class="durum-mesaji hidden"></p>
+    </form>
+
+    <!-- Silme onay modalı -->
+    <div id="sil-modal" class="modal-perde hidden">
+      <div class="modal-kutu" role="dialog" aria-modal="true" aria-labelledby="sil-modal-baslik">
+        <h3 id="sil-modal-baslik">Emin misiniz?</h3>
+        <p id="sil-modal-metin">
+          Bu odadaki sakinin tüm bilgileri (isim, iletişim, sağlık bilgileri ve
+          fotoğrafı) silinecek. Oda tekrar <strong>boş şablon</strong> haline
+          dönecek. Bu işlem geri alınamaz.
+        </p>
+        <div class="modal-butonlar">
+          <button type="button" id="sil-iptal" class="kucuk-buton">Vazgeç</button>
+          <button type="button" id="sil-onayla" class="tehlike-buton tehlike-buton-dolu">Evet, Sil</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4) Toplu Raporlar -->
+  <section id="raporlar-paneli" class="panel admin-panel hidden">
+    <div class="panel-ust-satir">
+      <h2>Toplu Raporlar</h2>
+      <button type="button" id="rapor-yazdir" class="kucuk-buton kucuk-buton-birincil">🖨️ Yazdır / PDF Kaydet</button>
+    </div>
+
+    <div class="rapor-filtre-satiri">
+      <label>Oda / Kat <input type="text" id="rapor-filtre-oda" placeholder="örn: A-2 (2. kat), B-1"></label>
+      <label>Hastalık <input type="text" id="rapor-filtre-hastalik" placeholder="örn: Diyabet"></label>
+      <label>İlaç <input type="text" id="rapor-filtre-ilac" placeholder="örn: Coumadin"></label>
+    </div>
+
+    <p id="rapor-durum" class="durum-mesaji hidden"></p>
+
+    <div class="rapor-yazdirilacak">
+      <h2 class="rapor-baslik-yazdirma">Sivas Huzurevi — Sakin Durum Tablosu</h2>
+      <table id="rapor-tablo" class="rapor-tablo">
+        <thead>
+          <tr>
+            <th>Ad Soyadı</th>
+            <th>Oda No</th>
+            <th>Hastalıklar</th>
+            <th>Aktif İlaçlar (Dozaj / Vakit)</th>
+          </tr>
+        </thead>
+        <tbody id="rapor-govde"></tbody>
+      </table>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>Bu panel yalnızca yetkili personel tarafından kullanılmalıdır.
+     <a href="index.html">Bilgi ekranına dön</a></p>
+</footer>
+
+<script src="assets/js/admin.js"></script>
+</body>
+</html>

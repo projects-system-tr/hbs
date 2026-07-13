@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0">
+<title>Sakin Bilgi Ekranı | Sivas Huzurevi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<!-- Bakanlık resmi favicon dosyasını assets/favicon.ico olarak ekleyin -->
+<link rel="icon" href="assets/favicon.ico">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="kurum-satir">
+    <!-- Bakanlık resmi logo dosyasını assets/logo.svg (veya .png) olarak ekleyin.
+         Dosya eklenene kadar bu görsel otomatik olarak gizlenir, bozuk resim ikonu görünmez. -->
+    <img src="assets/logo.svg" alt="" class="kurum-logo" onerror="this.style.display='none'">
+    <div class="kurum-metin">
+      <p class="kurum-ust">T.C. Aile ve Sosyal Hizmetler Bakanlığı</p>
+      <h1 class="kurum-baslik">Sivas Huzurevi Yaşlı Bakım ve Rehabilitasyon Merkezi Müdürlüğü</h1>
+    </div>
+  </div>
+</header>
+
+<main id="app">
+
+  <!-- Yerel dosya olarak açıldıysa uyarı -->
+  <div id="dosya-uyarisi" class="uyari hidden">
+    Bu sayfayı doğrudan dosya olarak açtınız, bu yüzden oda bilgileri yüklenemiyor.
+    Lütfen bir yerel sunucu ile açın (bkz. README) ya da siteyi GitHub Pages üzerinden ziyaret edin.
+  </div>
+
+  <!-- Oda kodu belirtilmediğinde gösterilecek arama ekranı -->
+  <section id="oda-arama" class="panel hidden">
+    <h2>Oda Bilgisi Görüntüle</h2>
+    <p>Bu ekran normalde odadaki QR kod okutularak açılır. Test etmek için bir oda kodu girin.</p>
+    <form id="oda-form" autocomplete="off">
+      <label for="oda-input">Oda Kodu veya İsim</label>
+      <div class="arama-kutu-sarici">
+        <input type="text" id="oda-input" name="oda" placeholder="Örn: A-101 veya Ahmet Yılmaz" autocapitalize="characters" required>
+        <div id="oneriler" class="oneri-liste hidden" role="listbox"></div>
+      </div>
+      <button type="submit">Görüntüle</button>
+    </form>
+  </section>
+
+  <!-- Yükleniyor durumu -->
+  <section id="yukleniyor" class="panel hidden">
+    <p>Bilgiler yükleniyor…</p>
+  </section>
+
+  <!-- Hata durumu -->
+  <section id="hata" class="panel hidden">
+    <h2>Bilgi Bulunamadı</h2>
+    <p id="hata-mesaji">Bu oda koduna ait kayıt bulunamadı.</p>
+    <a href="index.html" class="link-buton">Başa Dön</a>
+  </section>
+
+  <!-- Ana içerik -->
+  <section id="icerik" class="hidden">
+
+    <a href="index.html" class="geri-buton" aria-label="Oda aramaya geri dön">
+      <span aria-hidden="true">←</span> Aramaya Dön
+    </a>
+
+    <div class="profil-grid">
+
+      <!-- Sol sütun: fotoğraf + QR kod -->
+      <div class="profil-sol">
+        <div class="foto-cerceve">
+          <img id="foto" src="" alt="">
+        </div>
+        <div class="qr-blok">
+          <div id="qr-kod" class="qr-kod"></div>
+          <button type="button" id="qr-indir-buton" class="kucuk-buton">QR Kodu İndir</button>
+        </div>
+      </div>
+
+      <!-- Sağ sütun: kimlik + tüm bilgiler -->
+      <div class="profil-sag">
+
+        <div class="kimlik-baslik">
+          <h2 id="ad-soyad">—</h2>
+          <p class="oda-rozet">Oda <span id="oda-no">—</span></p>
+          <p class="giris-satiri">Giriş Tarihi: <strong id="giris-tarihi">—</strong></p>
+          <p id="tc-kimlik-satiri" class="giris-satiri hidden">T.C. Kimlik No: <strong id="tc-kimlik-no">—</strong></p>
+        </div>
+
+        <div class="kart">
+          <h3><span class="ikon-rozet ikon-tel">☎</span>İletişim Bilgileri</h3>
+          <div class="iletisim-satir">
+            <span class="iletisim-etiket">Sakinin Kendisi</span>
+            <a id="tel-kendisi" class="tel-link" href="#">
+              <span id="ad-kendisi">—</span> · <span id="numara-kendisi">—</span>
+            </a>
+          </div>
+          <div id="yakinlar-liste"></div>
+        </div>
+
+        <div class="kart">
+          <h3><span class="ikon-rozet ikon-ilac">💊</span>İlaç Bilgileri</h3>
+          <ul id="ilac-liste" class="bilgi-liste"></ul>
+        </div>
+
+        <div class="kart">
+          <h3><span class="ikon-rozet ikon-hastalik">🩺</span>Hastalık Bilgileri</h3>
+          <ul id="hastalik-liste" class="bilgi-liste"></ul>
+        </div>
+
+        <div class="kart">
+          <h3><span class="ikon-rozet ikon-ameliyat">🏥</span>Geçmiş Ameliyat Bilgileri</h3>
+          <ul id="ameliyat-liste" class="bilgi-liste"></ul>
+        </div>
+
+        <div class="kart">
+          <h3><span class="ikon-rozet ikon-not">📝</span>Notlar</h3>
+          <p id="notlar" class="notlar-metin">—</p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="acil-bosluk" aria-hidden="true"></div>
+
+  </section>
+
+</main>
+
+<!-- QR kütüphanesi (davidshimjs/qrcodejs) — sadece istemci tarafında, sunucu gerektirmez -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+<!-- 112 acil çağrı butonu — sayfanın ortasında, her zaman erişilebilir -->
+<a id="acil-buton" href="tel:112" aria-label="Acil Çağrı 112'yi Ara">
+  <span class="acil-halka" aria-hidden="true"></span>
+  <span class="acil-icerik">
+    <span class="acil-ust-metin" aria-hidden="true">Acil Çağrı</span>
+    <strong>112</strong>
+  </span>
+</a>
+
+<footer class="site-footer">
+  <p>Bu ekrandaki bilgiler yalnızca yetkili bakım personeli tarafından görüntülenmelidir.</p>
+</footer>
+
+<script src="assets/js/app.js"></script>
+</body>
+</html>
