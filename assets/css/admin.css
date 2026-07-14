@@ -307,6 +307,7 @@ fieldset label:last-child { margin-bottom: 0; }
     font-size: 8.5px;
     table-layout: fixed;
     width: 100%;
+    min-width: 0;
   }
   .rapor-tablo th, .rapor-tablo td {
     padding: 3px 4px;
