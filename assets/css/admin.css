@@ -276,14 +276,16 @@ fieldset label:last-child { margin-bottom: 0; }
   flex: 1; min-width: 160px;
 }
 .rapor-baslik-yazdirma { display: none; }
-.rapor-tablo { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+.rapor-yazdirilacak { overflow-x: auto; }
+.rapor-tablo { width: 100%; min-width: 1100px; border-collapse: collapse; font-size: 13.5px; }
 .rapor-tablo th, .rapor-tablo td {
   border: 1px solid var(--sinir);
   padding: 8px 10px;
   text-align: left;
   vertical-align: top;
 }
-.rapor-tablo th { background: var(--primer-tint); color: var(--primer-koyu); font-weight: 700; }
+.rapor-tablo th { background: var(--primer-tint); color: var(--primer-koyu); font-weight: 700; white-space: nowrap; }
+.rapor-tablo td { max-width: 220px; }
 .rapor-tablo tbody tr:nth-child(even) { background: #FAFAFA; }
 
 /* ---------- Yazdırma (Print) ---------- */
