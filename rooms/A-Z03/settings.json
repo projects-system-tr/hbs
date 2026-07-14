@@ -1,16 +1,17 @@
 {
-  "ad_soyad": "",
+  "ad_soyad": "Hamza Balta",
   "oda_no": "A-Z03",
-  "giris_tarihi": "",
+  "giris_tarihi": "01.01.2020",
+  "tc_kimlik_no": "49963139914",
   "iletisim": {
     "kendisi": {
-      "ad": "",
+      "ad": "Hamza Balta",
       "telefon": ""
     },
     "yakinlar": [
       {
-        "ad": "",
-        "telefon": ""
+        "ad": "Hasan Saydaner (Yeğeni)",
+        "telefon": "05301601317"
       },
       {
         "ad": "",
