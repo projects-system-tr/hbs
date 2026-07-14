@@ -303,25 +303,3 @@ fieldset label:last-child { margin-bottom: 0; }
   .rapor-tablo { font-size: 10px; }
   .rapor-tablo th, .rapor-tablo td { padding: 4px 6px; }
 }
-
-/* ---------- Kullanıcılar paneli ---------- */
-#kullanici-ekle-form { display: flex; gap: 14px; flex-wrap: wrap; align-items: flex-end; margin-bottom: 10px; }
-#kullanici-ekle-form label { flex: 1; min-width: 160px; }
-#kullanici-ekle-form button {
-  background: var(--primer); color: #fff; border: none;
-  padding: 13px 18px; border-radius: 10px; font-weight: 700; font-size: 14.5px;
-  cursor: pointer; font-family: var(--font-govde); white-space: nowrap;
-}
-#kullanici-ekle-form button:active { background: var(--primer-koyu); }
-
-.kullanici-liste { display: flex; flex-direction: column; gap: 8px; margin-top: 14px; }
-.kullanici-satir {
-  display: flex; align-items: center; justify-content: space-between;
-  background: var(--kart); border: 1px solid var(--sinir);
-  border-radius: 10px; padding: 10px 14px;
-}
-.kullanici-satir span { font-weight: 600; font-size: 14px; }
-.kullanici-liste:empty::before {
-  content: "Henüz kullanıcı tanımlanmadı — index.html giriş ekranı çalışmaz, önce bir kullanıcı ekleyin.";
-  color: var(--metin-soluk); font-size: 13.5px; font-style: italic;
-}
