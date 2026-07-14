@@ -1,11 +1,12 @@
 {
-  "ad_soyad": "",
+  "ad_soyad": "Adem Eken",
   "oda_no": "A-108",
-  "giris_tarihi": "",
+  "giris_tarihi": "01.01.2020",
+  "tc_kimlik_no": "16688241994",
   "iletisim": {
     "kendisi": {
-      "ad": "",
-      "telefon": ""
+      "ad": "Adem Eken",
+      "telefon": "05456467994"
     },
     "yakinlar": [
       {
