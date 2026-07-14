@@ -1,20 +1,21 @@
 {
-  "ad_soyad": "",
+  "ad_soyad": "Şerife Dudu Tekeş",
   "oda_no": "B-202",
-  "giris_tarihi": "",
+  "giris_tarihi": "01.01.2020",
+  "tc_kimlik_no": "43174357396",
   "iletisim": {
     "kendisi": {
-      "ad": "",
+      "ad": "Şerife Dudu Tekeş",
       "telefon": ""
     },
     "yakinlar": [
       {
-        "ad": "",
-        "telefon": ""
+        "ad": "Mehmet Tekeş (Oğlu)",
+        "telefon": "05422709006"
       },
       {
-        "ad": "",
-        "telefon": ""
+        "ad": "Ömer Tekeş (Yeğen)",
+        "telefon": "05530019977"
       },
       {
         "ad": "",
