@@ -3,8 +3,31 @@
     "oda_no": "A-101",
     "ad_soyad": "Cihat Karakaş",
     "giris_tarihi": "01.01.2020",
+    "tc_kimlik_no": "27538623488",
+    "iletisim": {
+      "kendisi": {
+        "ad": "Cihat Karakaş",
+        "telefon": "05304041797"
+      },
+      "yakinlar": [
+        {
+          "ad": "Sami Karakaş (Kardeşi)",
+          "telefon": "05335720486"
+        },
+        {
+          "ad": "",
+          "telefon": ""
+        },
+        {
+          "ad": "",
+          "telefon": ""
+        }
+      ]
+    },
     "hastaliklar": [],
-    "ilaclar": []
+    "ilaclar": [],
+    "ameliyatlar": [],
+    "notlar": ""
   },
   {
     "oda_no": "A-102",
