@@ -1,16 +1,17 @@
 {
-  "ad_soyad": "",
+  "ad_soyad": "Hasan Hüseyin Acar",
   "oda_no": "A-Z04",
-  "giris_tarihi": "",
+  "giris_tarihi": "01.01.2020",
+  "tc_kimlik_no": "26015490018",
   "iletisim": {
     "kendisi": {
-      "ad": "",
-      "telefon": ""
+      "ad": "Hasan Hüseyin Acar",
+      "telefon": "05366017784"
     },
     "yakinlar": [
       {
-        "ad": "",
-        "telefon": ""
+        "ad": "Yasin Akbulut (Muhtar)",
+        "telefon": "05368680308"
       },
       {
         "ad": "",
