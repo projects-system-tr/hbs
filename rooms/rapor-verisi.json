@@ -63,8 +63,46 @@
     "oda_no": "A-103",
     "ad_soyad": "Mustafa Polat",
     "giris_tarihi": "01.01.2020",
-    "hastaliklar": [],
-    "ilaclar": []
+    "tc_kimlik_no": "39437048996",
+    "iletisim": {
+      "kendisi": {
+        "ad": "Mustafa Polat",
+        "telefon": "05516750396"
+      },
+      "yakinlar": [
+        {
+          "ad": "Ömer Polat (Kardeşi)",
+          "telefon": "05067373379"
+        },
+        {
+          "ad": "",
+          "telefon": ""
+        },
+        {
+          "ad": "",
+          "telefon": ""
+        }
+      ]
+    },
+    "hastaliklar": [
+      "Kolelitiazis (Safra Kesesi Taşı)"
+    ],
+    "ilaclar": [
+      {
+        "ad": "Mucovit-c",
+        "dozaj": "1 Tablet",
+        "vakit": [
+          "Sabah",
+          "Öğle",
+          "Akşam",
+          "Gece"
+        ]
+      }
+    ],
+    "ameliyatlar": [
+      "2015 - Septoplasti"
+    ],
+    "notlar": "Agresif bir kişiliğe sahip."
   },
   {
     "oda_no": "A-104",
