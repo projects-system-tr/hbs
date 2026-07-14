@@ -1,16 +1,17 @@
 {
-  "ad_soyad": "",
+  "ad_soyad": "Ömer Canatan",
   "oda_no": "A-Z10",
-  "giris_tarihi": "",
+  "giris_tarihi": "01.01.2020",
+  "tc_kimlik_no": "52987030082",
   "iletisim": {
     "kendisi": {
-      "ad": "",
-      "telefon": ""
+      "ad": "Ömer Canatan",
+      "telefon": "05050385896"
     },
     "yakinlar": [
       {
-        "ad": "",
-        "telefon": ""
+        "ad": "Ahmet Canatan (Kardeşi)",
+        "telefon": "05519850200"
       },
       {
         "ad": "",
