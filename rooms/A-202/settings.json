@@ -1,16 +1,17 @@
 {
-  "ad_soyad": "",
+  "ad_soyad": "İbrahim Arslan",
   "oda_no": "A-202",
-  "giris_tarihi": "",
+  "giris_tarihi": "01.01.2020",
+  "tc_kimlik_no": "18863719328",
   "iletisim": {
     "kendisi": {
-      "ad": "",
+      "ad": "İbrahim Arslan",
       "telefon": ""
     },
     "yakinlar": [
       {
-        "ad": "",
-        "telefon": ""
+        "ad": "İlhan Arslan (Kardeşi)",
+        "telefon": "05323845118"
       },
       {
         "ad": "",
