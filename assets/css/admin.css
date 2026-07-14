@@ -1,6 +1,7 @@
 /* Admin paneli — style.css'teki degiskenleri (--primer, --sinir vb.) kullanir */
 
-main#admin-app { max-width: 640px; margin: 0 auto; padding: 24px 16px 60px; }
+main#admin-app { max-width: 640px; margin: 0 auto; padding: 24px 16px 60px; transition: max-width 0.15s ease; }
+main#admin-app.main-genis { max-width: 1120px; }
 
 .admin-panel { text-align: left; margin-bottom: 16px; }
 .admin-panel h2 { font-family: var(--font-baslik); font-size: 19px; margin: 0 0 10px; }
