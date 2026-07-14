@@ -1,16 +1,17 @@
 {
-  "ad_soyad": "",
+  "ad_soyad": "Durdu Mehmet Şimşek",
   "oda_no": "A-210",
-  "giris_tarihi": "",
+  "giris_tarihi": "01.01.2020",
+  "tc_kimlik_no": "56209129240",
   "iletisim": {
     "kendisi": {
-      "ad": "",
-      "telefon": ""
+      "ad": "Durdu Mehmet Şimşek",
+      "telefon": "05524017977"
     },
     "yakinlar": [
       {
-        "ad": "",
-        "telefon": ""
+        "ad": "Şeref Buğra (Kuzeni)",
+        "telefon": "05524017977"
       },
       {
         "ad": "",
