@@ -26,7 +26,6 @@
 <div class="admin-ust-cubuk">
   <button type="button" id="sekme-duzenle" class="kucuk-buton sekme-aktif">Oda Düzenle</button>
   <button type="button" id="sekme-raporlar" class="kucuk-buton">Toplu Raporlar</button>
-  <button type="button" id="sekme-kullanicilar" class="kucuk-buton">Kullanıcılar</button>
   <a href="index.html" class="kucuk-buton">🏠 Ana Sayfaya Git</a>
 </div>
 
@@ -275,32 +274,6 @@
         <tbody id="rapor-govde"></tbody>
       </table>
     </div>
-  </section>
-
-  <!-- 5) Kullanıcılar (index.html giriş ekranı için) -->
-  <section id="kullanicilar-paneli" class="panel admin-panel hidden">
-    <h2>Kullanıcılar</h2>
-    <p class="admin-aciklama">
-      Burada tanımlanan kullanıcı adı/şifre, yalnızca bilgi ekranının
-      (<code>index.html</code>) başındaki giriş ekranı içindir — GitHub'a
-      bağlanmak için kullandığınız token'la ilgisi yoktur. Şifreler düz
-      metin değil, tuzlanmış (salted) SHA-256 özeti olarak saklanır; yine de
-      bunun gerçek bir sunucu tarafı doğrulama olmadığını, kaynağı bilen
-      birinin bu ekranı atlayabileceğini unutmayın.
-    </p>
-
-    <form id="kullanici-ekle-form">
-      <label>Kullanıcı Adı
-        <input type="text" id="ku-kullanici-adi" required autocomplete="off">
-      </label>
-      <label>Şifre
-        <input type="password" id="ku-sifre" required autocomplete="new-password">
-      </label>
-      <button type="submit" id="kullanici-ekle-buton">+ Kullanıcı Ekle</button>
-    </form>
-    <p id="kullanici-durum" class="durum-mesaji hidden"></p>
-
-    <div id="kullanici-liste" class="kullanici-liste"></div>
   </section>
 
 </main>
