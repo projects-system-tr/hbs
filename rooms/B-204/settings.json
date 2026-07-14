@@ -1,16 +1,17 @@
 {
-  "ad_soyad": "",
+  "ad_soyad": "Meryem İsmihan",
   "oda_no": "B-204",
-  "giris_tarihi": "",
+  "giris_tarihi": "01.01.2020",
+  "tc_kimlik_no": "18023756798",
   "iletisim": {
     "kendisi": {
-      "ad": "",
+      "ad": "Meryem İsmihan",
       "telefon": ""
     },
     "yakinlar": [
       {
-        "ad": "",
-        "telefon": ""
+        "ad": "Mustafa Kaya (Vasi)",
+        "telefon": "05366703697"
       },
       {
         "ad": "",
