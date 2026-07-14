@@ -1,10 +1,10 @@
 """
 Toplu Raporlar ekrani icin ozet veri dosyasi olusturucu.
 
-rooms/ altindaki her odanin settings.json'undan oda_no, ad_soyad,
-giris_tarihi, hastaliklar ve ilaclar alanlarini toplayip tek bir
-rooms/rapor-verisi.json dosyasina yazar. Admin panelindeki "Toplu
-Raporlar" ekrani, 96 ayri dosya yerine bu TEK dosyayi okur.
+rooms/ altindaki her odanin settings.json'undan tum alanlari (isim, oda,
+giris tarihi, T.C. kimlik no, iletisim, hastaliklar, ilaclar, ameliyatlar,
+notlar) toplayip tek bir rooms/rapor-verisi.json dosyasina yazar. Admin
+panelindeki "Toplu Raporlar" ekrani, 96 ayri dosya yerine bu TEK dosyayi okur.
 
 NOT: admin.html uzerinden yapilan her kayit/silme isleminde bu dosya
 zaten otomatik guncellenir. Bu scripti sadece:
@@ -47,8 +47,12 @@ def main():
             "oda_no": veri.get("oda_no") or oda_kodu,
             "ad_soyad": veri.get("ad_soyad") or "",
             "giris_tarihi": veri.get("giris_tarihi") or "",
+            "tc_kimlik_no": veri.get("tc_kimlik_no") or "",
+            "iletisim": veri.get("iletisim") or {"kendisi": {"ad": "", "telefon": ""}, "yakinlar": []},
             "hastaliklar": veri.get("hastaliklar") or [],
             "ilaclar": veri.get("ilaclar") or [],
+            "ameliyatlar": veri.get("ameliyatlar") or [],
+            "notlar": veri.get("notlar") or "",
         })
 
     kayitlar.sort(key=lambda k: k["oda_no"])
