@@ -1,16 +1,17 @@
 {
-  "ad_soyad": "",
+  "ad_soyad": "Hüseyin Polat",
   "oda_no": "A-209",
-  "giris_tarihi": "",
+  "giris_tarihi": "01.01.2020",
+  "tc_kimlik_no": "13061369740",
   "iletisim": {
     "kendisi": {
-      "ad": "",
-      "telefon": ""
+      "ad": "Hüseyin Polat",
+      "telefon": "05426942056"
     },
     "yakinlar": [
       {
-        "ad": "",
-        "telefon": ""
+        "ad": "Saniye Kayapınar (Kızı)",
+        "telefon": "05432590968"
       },
       {
         "ad": "",
