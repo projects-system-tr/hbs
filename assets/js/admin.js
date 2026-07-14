@@ -153,7 +153,6 @@
     document.getElementById("oda-secim-paneli").classList.add("hidden");
     document.getElementById("duzenle-paneli").classList.add("hidden");
     document.getElementById("raporlar-paneli").classList.add("hidden");
-    document.getElementById("kullanicilar-paneli").classList.add("hidden");
     document.getElementById("baglanti-paneli").classList.remove("hidden");
     durumGizle(baglantiDurum);
   });
@@ -715,20 +714,17 @@
     return zincir;
   }
 
-  // ---------- 6) Sekmeler: Oda Düzenle / Toplu Raporlar / Kullanıcılar ----------
+  // ---------- 6) Sekmeler: Oda Düzenle / Toplu Raporlar ----------
   var sekmeDuzenle = document.getElementById("sekme-duzenle");
   var sekmeRaporlar = document.getElementById("sekme-raporlar");
-  var sekmeKullanicilar = document.getElementById("sekme-kullanicilar");
   var raporlarPaneli = document.getElementById("raporlar-paneli");
-  var kullanicilarPaneli = document.getElementById("kullanicilar-paneli");
   var RAPOR_VERISI = null;
 
   function tumSekmeleriGizle() {
-    [sekmeDuzenle, sekmeRaporlar, sekmeKullanicilar].forEach(function (s) { s.classList.remove("sekme-aktif"); });
+    [sekmeDuzenle, sekmeRaporlar].forEach(function (s) { s.classList.remove("sekme-aktif"); });
     document.getElementById("oda-secim-paneli").classList.add("hidden");
     document.getElementById("duzenle-paneli").classList.add("hidden");
     raporlarPaneli.classList.add("hidden");
-    kullanicilarPaneli.classList.add("hidden");
   }
 
   sekmeDuzenle.addEventListener("click", function () {
@@ -742,13 +738,6 @@
     sekmeRaporlar.classList.add("sekme-aktif");
     raporlarPaneli.classList.remove("hidden");
     raporYukle();
-  });
-
-  sekmeKullanicilar.addEventListener("click", function () {
-    tumSekmeleriGizle();
-    sekmeKullanicilar.classList.add("sekme-aktif");
-    kullanicilarPaneli.classList.remove("hidden");
-    kullanicilariYukle();
   });
 
   function raporYukle() {
@@ -855,119 +844,4 @@
     window.print();
   });
 
-  // ---------- 7) Kullanıcılar (index.html giriş ekranı) ----------
-  // NOT: Bu, index.html başındaki basit "caydırıcı" giriş ekranı içindir;
-  // GitHub bağlantı token'ıyla ilgisi yoktur ve gerçek bir sunucu tarafı
-  // yetkilendirme değildir.
-  function hashUret(metin) {
-    var kodlayici = new TextEncoder();
-    return crypto.subtle.digest("SHA-256", kodlayici.encode(metin)).then(function (buffer) {
-      return Array.prototype.map.call(new Uint8Array(buffer), function (b) {
-        return b.toString(16).padStart(2, "0");
-      }).join("");
-    });
-  }
-
-  function tuzUret() {
-    var dizi = new Uint8Array(16);
-    crypto.getRandomValues(dizi);
-    return Array.prototype.map.call(dizi, function (b) { return b.toString(16).padStart(2, "0"); }).join("");
-  }
-
-  var KULLANICILAR = [];
-
-  function kullanicilariYukle() {
-    var durum = document.getElementById("kullanici-durum");
-    durumGoster(durum, "Kullanıcılar yükleniyor…", "bilgi");
-    ghGet("kullanicilar.json")
-      .then(function (dosya) {
-        KULLANICILAR = dosya ? JSON.parse(b64DecodeUnicode(dosya.content)) : [];
-        durumGizle(durum);
-        kullanicilariCiz();
-      })
-      .catch(function (err) {
-        durumGoster(durum, err.message, "hata");
-      });
-  }
-
-  function kullanicilariCiz() {
-    var kutu = document.getElementById("kullanici-liste");
-    kutu.innerHTML = "";
-    KULLANICILAR.forEach(function (k) {
-      var satir = document.createElement("div");
-      satir.className = "kullanici-satir";
-      var ad = document.createElement("span");
-      ad.textContent = k.kullanici_adi;
-      var silBtn = document.createElement("button");
-      silBtn.type = "button";
-      silBtn.className = "tehlike-buton";
-      silBtn.textContent = "Sil";
-      silBtn.addEventListener("click", function () { kullaniciSil(k.kullanici_adi); });
-      satir.appendChild(ad);
-      satir.appendChild(silBtn);
-      kutu.appendChild(satir);
-    });
-  }
-
-  function kullanicilariKaydet(mesaj) {
-    return ghGet("kullanicilar.json").then(function (dosya) {
-      var sha = dosya ? dosya.sha : null;
-      var icerik = b64EncodeUnicode(JSON.stringify(KULLANICILAR, null, 2));
-      return ghPut("kullanicilar.json", icerik, mesaj, sha);
-    });
-  }
-
-  document.getElementById("kullanici-ekle-form").addEventListener("submit", function (e) {
-    e.preventDefault();
-    var durum = document.getElementById("kullanici-durum");
-    var ekleButon = document.getElementById("kullanici-ekle-buton");
-    var kullaniciAdi = document.getElementById("ku-kullanici-adi").value.trim();
-    var sifre = document.getElementById("ku-sifre").value;
-
-    if (!kullaniciAdi || !sifre) return;
-    if (KULLANICILAR.some(function (k) { return k.kullanici_adi === kullaniciAdi; })) {
-      durumGoster(durum, "Bu kullanıcı adı zaten var.", "hata");
-      return;
-    }
-
-    ekleButon.disabled = true;
-    durumGoster(durum, "Ekleniyor…", "bilgi");
-
-    var tuz = tuzUret();
-    hashUret(tuz + sifre)
-      .then(function (hash) {
-        KULLANICILAR.push({ kullanici_adi: kullaniciAdi, tuz: tuz, sifre_hash: hash });
-        return kullanicilariKaydet("Kullanıcı eklendi: " + kullaniciAdi);
-      })
-      .then(function () {
-        durumGoster(durum, "Kullanıcı eklendi ✓", "basarili");
-        document.getElementById("ku-kullanici-adi").value = "";
-        document.getElementById("ku-sifre").value = "";
-        kullanicilariCiz();
-      })
-      .catch(function (err) {
-        KULLANICILAR = KULLANICILAR.filter(function (k) { return k.kullanici_adi !== kullaniciAdi; });
-        durumGoster(durum, err.message, "hata");
-      })
-      .finally(function () {
-        ekleButon.disabled = false;
-      });
-  });
-
-  function kullaniciSil(kullaniciAdi) {
-    var durum = document.getElementById("kullanici-durum");
-    var yedek = KULLANICILAR;
-    KULLANICILAR = KULLANICILAR.filter(function (k) { return k.kullanici_adi !== kullaniciAdi; });
-    durumGoster(durum, "Siliniyor…", "bilgi");
-    kullanicilariKaydet("Kullanıcı silindi: " + kullaniciAdi)
-      .then(function () {
-        durumGoster(durum, "Kullanıcı silindi ✓", "basarili");
-        kullanicilariCiz();
-      })
-      .catch(function (err) {
-        KULLANICILAR = yedek;
-        durumGoster(durum, err.message, "hata");
-        kullanicilariCiz();
-      });
-  }
 })();
