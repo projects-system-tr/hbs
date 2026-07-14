@@ -93,8 +93,31 @@
     "oda_no": "A-104",
     "ad_soyad": "Kenan Deveci",
     "giris_tarihi": "01.01.2020",
+    "tc_kimlik_no": "30974325182",
+    "iletisim": {
+      "kendisi": {
+        "ad": "Kenan Deveci",
+        "telefon": "05435805602"
+      },
+      "yakinlar": [
+        {
+          "ad": "Mukadder Göktaş (Kardeşi)",
+          "telefon": "05309787701"
+        },
+        {
+          "ad": "",
+          "telefon": ""
+        },
+        {
+          "ad": "",
+          "telefon": ""
+        }
+      ]
+    },
     "hastaliklar": [],
-    "ilaclar": []
+    "ilaclar": [],
+    "ameliyatlar": [],
+    "notlar": ""
   },
   {
     "oda_no": "A-105",
