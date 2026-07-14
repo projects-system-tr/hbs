@@ -1,16 +1,17 @@
 {
-  "ad_soyad": "",
+  "ad_soyad": "Ahmet Öztürk",
   "oda_no": "A-211",
-  "giris_tarihi": "",
+  "giris_tarihi": "01.01.2020",
+  "tc_kimlik_no": "29612372282",
   "iletisim": {
     "kendisi": {
-      "ad": "",
-      "telefon": ""
+      "ad": "Ahmet Öztürk",
+      "telefon": "05413286251"
     },
     "yakinlar": [
       {
-        "ad": "",
-        "telefon": ""
+        "ad": "Semra Saydık (Kardeşi)",
+        "telefon": "05455816013"
       },
       {
         "ad": "",
