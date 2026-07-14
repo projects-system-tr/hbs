@@ -1,16 +1,17 @@
 {
-  "ad_soyad": "",
+  "ad_soyad": "Şinasi Aycan",
   "oda_no": "A-106",
-  "giris_tarihi": "",
+  "giris_tarihi": "01.01.2020",
+  "tc_kimlik_no": "25936932206",
   "iletisim": {
     "kendisi": {
-      "ad": "",
-      "telefon": ""
+      "ad": "Şinasi Aycan",
+      "telefon": "05415209459"
     },
     "yakinlar": [
       {
-        "ad": "",
-        "telefon": ""
+        "ad": "Bilal Erdoğan (Yeğeni)",
+        "telefon": "05418661650"
       },
       {
         "ad": "",
