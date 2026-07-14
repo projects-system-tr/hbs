@@ -1,16 +1,17 @@
 {
-  "ad_soyad": "",
+  "ad_soyad": "Feyzullah Taşçı",
   "oda_no": "C-Z05",
-  "giris_tarihi": "",
+  "giris_tarihi": "01.01.2020",
+  "tc_kimlik_no": "24233553096",
   "iletisim": {
     "kendisi": {
-      "ad": "",
+      "ad": "Feyzullah Taşçı",
       "telefon": ""
     },
     "yakinlar": [
       {
-        "ad": "",
-        "telefon": ""
+        "ad": "Yasin Taşçı (Oğlu)",
+        "telefon": "05445720018"
       },
       {
         "ad": "",
