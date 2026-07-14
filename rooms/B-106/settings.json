@@ -1,16 +1,17 @@
 {
-  "ad_soyad": "",
+  "ad_soyad": "Zübeyde Alagöz",
   "oda_no": "B-106",
-  "giris_tarihi": "",
+  "giris_tarihi": "01.01.2020",
+  "tc_kimlik_no": "45988671828",
   "iletisim": {
     "kendisi": {
-      "ad": "",
-      "telefon": ""
+      "ad": "Zübeyde Alagöz",
+      "telefon": "05309727948"
     },
     "yakinlar": [
       {
-        "ad": "",
-        "telefon": ""
+        "ad": "Tebernuş Kazan (Kardeşi)",
+        "telefon": "05161618290"
       },
       {
         "ad": "",
