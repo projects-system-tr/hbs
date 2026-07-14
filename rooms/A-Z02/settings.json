@@ -1,16 +1,17 @@
 {
-  "ad_soyad": "",
+  "ad_soyad": "Abdullah Ünnü",
   "oda_no": "A-Z02",
-  "giris_tarihi": "",
+  "giris_tarihi": "01.01.2020",
+  "tc_kimlik_no": "17354770060",
   "iletisim": {
     "kendisi": {
-      "ad": "",
-      "telefon": ""
+      "ad": "Abdullah Ünnü",
+      "telefon": "05386444920"
     },
     "yakinlar": [
       {
-        "ad": "",
-        "telefon": ""
+        "ad": "Ata Kangöz",
+        "telefon": "05330903459"
       },
       {
         "ad": "",
