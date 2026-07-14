@@ -1,16 +1,17 @@
 {
-  "ad_soyad": "",
+  "ad_soyad": "Osman Ceylan",
   "oda_no": "C-Z06",
-  "giris_tarihi": "",
+  "giris_tarihi": "01.01.2020",
+  "tc_kimlik_no": "23306021692",
   "iletisim": {
     "kendisi": {
-      "ad": "",
+      "ad": "Osman Ceylan",
       "telefon": ""
     },
     "yakinlar": [
       {
-        "ad": "",
-        "telefon": ""
+        "ad": "Mehmet Ceylan (Yeğen)",
+        "telefon": "05399801835"
       },
       {
         "ad": "",
