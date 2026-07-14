@@ -1,20 +1,21 @@
 {
-  "ad_soyad": "",
+  "ad_soyad": "Kadriye Yumuk",
   "oda_no": "B-112",
-  "giris_tarihi": "",
+  "giris_tarihi": "01.01.2020",
+  "tc_kimlik_no": "43663340076",
   "iletisim": {
     "kendisi": {
-      "ad": "",
+      "ad": "Kadriye Yumuk",
       "telefon": ""
     },
     "yakinlar": [
       {
-        "ad": "",
-        "telefon": ""
+        "ad": "Adil Yumuk (Yeğeni)",
+        "telefon": "05356764965"
       },
       {
-        "ad": "",
-        "telefon": ""
+        "ad": "Meliha Eleman (Kardeşi)",
+        "telefon": "05442847391"
       },
       {
         "ad": "",
