@@ -84,25 +84,10 @@
         }
       ]
     },
-    "hastaliklar": [
-      "Kolelitiazis (Safra Kesesi Taşı)"
-    ],
-    "ilaclar": [
-      {
-        "ad": "Mucovit-c",
-        "dozaj": "1 Tablet",
-        "vakit": [
-          "Sabah",
-          "Öğle",
-          "Akşam",
-          "Gece"
-        ]
-      }
-    ],
-    "ameliyatlar": [
-      "2015 - Septoplasti"
-    ],
-    "notlar": "Agresif bir kişiliğe sahip."
+    "hastaliklar": [],
+    "ilaclar": [],
+    "ameliyatlar": [],
+    "notlar": ""
   },
   {
     "oda_no": "A-104",
