@@ -1,16 +1,17 @@
 {
-  "ad_soyad": "",
+  "ad_soyad": "Arif Atabek",
   "oda_no": "A-204",
-  "giris_tarihi": "",
+  "giris_tarihi": "01.01.2020",
+  "tc_kimlik_no": "31778289342",
   "iletisim": {
     "kendisi": {
-      "ad": "",
-      "telefon": ""
+      "ad": "Arif Atabek",
+      "telefon": "05347604273"
     },
     "yakinlar": [
       {
-        "ad": "",
-        "telefon": ""
+        "ad": "Cem Atabek (Oğlu)",
+        "telefon": "05345813241"
       },
       {
         "ad": "",
