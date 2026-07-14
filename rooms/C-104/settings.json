@@ -1,16 +1,17 @@
 {
-  "ad_soyad": "",
+  "ad_soyad": "Selahattin Uzun",
   "oda_no": "C-104",
-  "giris_tarihi": "",
+  "giris_tarihi": "01.01.2020",
+  "tc_kimlik_no": "57724257166",
   "iletisim": {
     "kendisi": {
-      "ad": "",
-      "telefon": ""
+      "ad": "Selahattin Uzun",
+      "telefon": "05337042558"
     },
     "yakinlar": [
       {
-        "ad": "",
-        "telefon": ""
+        "ad": "Şükran Balel (Komşu)",
+        "telefon": "05301642882"
       },
       {
         "ad": "",
