@@ -1,16 +1,17 @@
 {
-  "ad_soyad": "",
+  "ad_soyad": "Fazlı Karademir",
   "oda_no": "C-106",
-  "giris_tarihi": "",
+  "giris_tarihi": "01.01.2020",
+  "tc_kimlik_no": "10223464732",
   "iletisim": {
     "kendisi": {
-      "ad": "",
-      "telefon": ""
+      "ad": "Fazlı Karademir",
+      "telefon": "05422729464"
     },
     "yakinlar": [
       {
-        "ad": "",
-        "telefon": ""
+        "ad": "İsmail Karademir (Yeğen)",
+        "telefon": "05446259398"
       },
       {
         "ad": "",
