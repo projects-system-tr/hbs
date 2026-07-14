@@ -1,17 +1,17 @@
 {
-  "ad_soyad": "Gamze Nur Yıldırım",
+  "ad_soyad": "Hasan Ceylan",
   "oda_no": "A-Z01",
-  "giris_tarihi": "21.05.2024",
-  "tc_kimlik_no": "11111111111",
+  "giris_tarihi": "01.01.2020",
+  "tc_kimlik_no": "10305020078",
   "iletisim": {
     "kendisi": {
-      "ad": "",
-      "telefon": "05319937433"
+      "ad": "Hasan Ceylan",
+      "telefon": "05427454393"
     },
     "yakinlar": [
       {
-        "ad": "",
-        "telefon": ""
+        "ad": "Yücel ceylan (Oğlu)",
+        "telefon": "05055445722"
       },
       {
         "ad": "",
