@@ -1,16 +1,17 @@
 {
-  "ad_soyad": "",
+  "ad_soyad": "Arif Kangör",
   "oda_no": "C-Z03",
-  "giris_tarihi": "",
+  "giris_tarihi": "01.01.2020",
+  "tc_kimlik_no": "12731931478",
   "iletisim": {
     "kendisi": {
-      "ad": "",
+      "ad": "Arif Kangör",
       "telefon": ""
     },
     "yakinlar": [
       {
-        "ad": "",
-        "telefon": ""
+        "ad": "Hamza Kangör (Kardeş)",
+        "telefon": "05374246573"
       },
       {
         "ad": "",
