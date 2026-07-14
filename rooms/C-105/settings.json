@@ -1,16 +1,17 @@
 {
-  "ad_soyad": "",
+  "ad_soyad": "Abdulkadir Hocaoğlu",
   "oda_no": "C-105",
-  "giris_tarihi": "",
+  "giris_tarihi": "01.01.2020",
+  "tc_kimlik_no": "22546486872",
   "iletisim": {
     "kendisi": {
-      "ad": "",
-      "telefon": ""
+      "ad": "Abdulkadir Hocaoğlu",
+      "telefon": "05073399114"
     },
     "yakinlar": [
       {
-        "ad": "",
-        "telefon": ""
+        "ad": "Deniz Hanım (Kızı)",
+        "telefon": "05050279498"
       },
       {
         "ad": "",
