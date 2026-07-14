@@ -1,20 +1,21 @@
 {
-  "ad_soyad": "",
+  "ad_soyad": "Kıymet Pürlü",
   "oda_no": "B-201",
-  "giris_tarihi": "",
+  "giris_tarihi": "01.01.2020",
+  "tc_kimlik_no": "40621443824",
   "iletisim": {
     "kendisi": {
-      "ad": "",
+      "ad": "Kıymet Pürlü",
       "telefon": ""
     },
     "yakinlar": [
       {
-        "ad": "",
-        "telefon": ""
+        "ad": "Fadime Akarçay (Yeğen)",
+        "telefon": "05523994164"
       },
       {
-        "ad": "",
-        "telefon": ""
+        "ad": "Osman Durna (Akraba)",
+        "telefon": "05346829628"
       },
       {
         "ad": "",
