@@ -1,20 +1,21 @@
 {
-  "ad_soyad": "",
+  "ad_soyad": "Hüseyin Güler",
   "oda_no": "A-Z06",
-  "giris_tarihi": "",
+  "giris_tarihi": "01.01.2020",
+  "tc_kimlik_no": "27808870178",
   "iletisim": {
     "kendisi": {
-      "ad": "",
-      "telefon": ""
+      "ad": "Hüseyin Güler",
+      "telefon": "05465040146"
     },
     "yakinlar": [
       {
-        "ad": "",
-        "telefon": ""
+        "ad": "Oğlu",
+        "telefon": "05457240084"
       },
       {
-        "ad": "",
-        "telefon": ""
+        "ad": "Mehtap Karayel (Kızı)",
+        "telefon": "05459701756"
       },
       {
         "ad": "",
