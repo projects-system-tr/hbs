@@ -1,16 +1,17 @@
 {
-  "ad_soyad": "",
+  "ad_soyad": "Menevşe Yüksel",
   "oda_no": "B-105",
-  "giris_tarihi": "",
+  "giris_tarihi": "01.01.2020",
+  "tc_kimlik_no": "18929728578",
   "iletisim": {
     "kendisi": {
-      "ad": "",
-      "telefon": ""
+      "ad": "Menevşe Yüksel",
+      "telefon": "05415349678"
     },
     "yakinlar": [
       {
-        "ad": "",
-        "telefon": ""
+        "ad": "Hikmet Yavuz (Yeğen)",
+        "telefon": "05322577258"
       },
       {
         "ad": "",
