@@ -1,16 +1,17 @@
 {
-  "ad_soyad": "",
+  "ad_soyad": "Nazire Kaya",
   "oda_no": "B-111",
-  "giris_tarihi": "",
+  "giris_tarihi": "01.01.2020",
+  "tc_kimlik_no": "38447075312",
   "iletisim": {
     "kendisi": {
-      "ad": "",
+      "ad": "Nazire Kaya",
       "telefon": ""
     },
     "yakinlar": [
       {
-        "ad": "",
-        "telefon": ""
+        "ad": "Türkan Kaya (Kızı)",
+        "telefon": "05453800994"
       },
       {
         "ad": "",
