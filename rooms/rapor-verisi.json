@@ -639,10 +639,21 @@
   },
   {
     "oda_no": "C-Z01",
-    "ad_soyad": "",
-    "giris_tarihi": "",
-    "hastaliklar": [],
-    "ilaclar": []
+    "ad_soyad": "Ali Kırmalı",
+    "giris_tarihi": "05.05.2020",
+    "hastaliklar": [
+      "Vertigo (Baş Dönmesi)"
+    ],
+    "ilaclar": [
+      {
+        "ad": "Parol (Parasetamol)",
+        "dozaj": "1 Tablet",
+        "vakit": [
+          "Sabah",
+          "Öğle"
+        ]
+      }
+    ]
   },
   {
     "oda_no": "C-Z02",
