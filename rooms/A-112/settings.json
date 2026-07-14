@@ -1,16 +1,17 @@
 {
-  "ad_soyad": "",
+  "ad_soyad": "Levent İşler",
   "oda_no": "A-112",
-  "giris_tarihi": "",
+  "giris_tarihi": "01.01.2020",
+  "tc_kimlik_no": "17372216830",
   "iletisim": {
     "kendisi": {
-      "ad": "",
-      "telefon": ""
+      "ad": "Levent İşler",
+      "telefon": "05548108891"
     },
     "yakinlar": [
       {
-        "ad": "",
-        "telefon": ""
+        "ad": "Mustafa Serhat İşler (Kardeşi)",
+        "telefon": "05448965806"
       },
       {
         "ad": "",
