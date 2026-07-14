@@ -1,24 +1,25 @@
 {
-  "ad_soyad": "",
+  "ad_soyad": "Nazire Koç",
   "oda_no": "B-108",
-  "giris_tarihi": "",
+  "giris_tarihi": "01.01.2020",
+  "tc_kimlik_no": "24838968424",
   "iletisim": {
     "kendisi": {
-      "ad": "",
+      "ad": "Nazire Koç",
       "telefon": ""
     },
     "yakinlar": [
       {
-        "ad": "",
-        "telefon": ""
+        "ad": "Ayfer Koç (Kızı)",
+        "telefon": "05454626393"
       },
       {
         "ad": "",
-        "telefon": ""
+        "telefon": "05344027086"
       },
       {
-        "ad": "",
-        "telefon": ""
+        "ad": "Arife Hanım (Kızı)",
+        "telefon": "05532366648"
       }
     ]
   },
