@@ -1,20 +1,21 @@
 {
-  "ad_soyad": "",
+  "ad_soyad": "Hasan Gündüz",
   "oda_no": "C-Z08",
-  "giris_tarihi": "",
+  "giris_tarihi": "01.01.2020",
+  "tc_kimlik_no": "55612665680",
   "iletisim": {
     "kendisi": {
-      "ad": "",
+      "ad": "Hasan Gündüz",
       "telefon": ""
     },
     "yakinlar": [
       {
-        "ad": "",
-        "telefon": ""
+        "ad": "Tanju Gündüz (Oğlu)",
+        "telefon": "05417810942"
       },
       {
-        "ad": "",
-        "telefon": ""
+        "ad": "Güllem Karatepe (Yeğen)",
+        "telefon": "05396841922"
       },
       {
         "ad": "",
