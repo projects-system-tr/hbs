@@ -153,6 +153,7 @@
     document.getElementById("oda-secim-paneli").classList.add("hidden");
     document.getElementById("duzenle-paneli").classList.add("hidden");
     document.getElementById("raporlar-paneli").classList.add("hidden");
+    document.getElementById("admin-app").classList.remove("main-genis");
     document.getElementById("baglanti-paneli").classList.remove("hidden");
     durumGizle(baglantiDurum);
   });
@@ -731,12 +732,14 @@
     tumSekmeleriGizle();
     sekmeDuzenle.classList.add("sekme-aktif");
     document.getElementById("oda-secim-paneli").classList.remove("hidden");
+    document.getElementById("admin-app").classList.remove("main-genis");
   });
 
   sekmeRaporlar.addEventListener("click", function () {
     tumSekmeleriGizle();
     sekmeRaporlar.classList.add("sekme-aktif");
     raporlarPaneli.classList.remove("hidden");
+    document.getElementById("admin-app").classList.add("main-genis");
     raporYukle();
   });
 
