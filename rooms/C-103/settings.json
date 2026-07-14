@@ -1,20 +1,21 @@
 {
-  "ad_soyad": "",
+  "ad_soyad": "Muharrem Kara",
   "oda_no": "C-103",
-  "giris_tarihi": "",
+  "giris_tarihi": "01.01.2020",
+  "tc_kimlik_no": "65095271230",
   "iletisim": {
     "kendisi": {
-      "ad": "",
+      "ad": "Muharrem Kara",
       "telefon": ""
     },
     "yakinlar": [
       {
-        "ad": "",
-        "telefon": ""
+        "ad": "Behsat Eren (Vasi)",
+        "telefon": "+31642100160"
       },
       {
-        "ad": "",
-        "telefon": ""
+        "ad": "Türcihan Koçak (Akraba)",
+        "telefon": "05413854120"
       },
       {
         "ad": "",
