@@ -1,16 +1,17 @@
 {
-  "ad_soyad": "",
+  "ad_soyad": "Hatice Gürbüz",
   "oda_no": "B-109",
-  "giris_tarihi": "",
+  "giris_tarihi": "01.01.2020",
+  "tc_kimlik_no": "36641130486",
   "iletisim": {
     "kendisi": {
-      "ad": "",
+      "ad": "Hatice Gürbüz",
       "telefon": ""
     },
     "yakinlar": [
       {
-        "ad": "",
-        "telefon": ""
+        "ad": "Behice Gürbüz (Yeğeni)",
+        "telefon": "05373067285"
       },
       {
         "ad": "",
