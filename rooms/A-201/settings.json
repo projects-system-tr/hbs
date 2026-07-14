@@ -1,16 +1,17 @@
 {
-  "ad_soyad": "",
+  "ad_soyad": "Yusuf Boyraz",
   "oda_no": "A-201",
-  "giris_tarihi": "",
+  "giris_tarihi": "01.01.2020",
+  "tc_kimlik_no": "29926797900",
   "iletisim": {
     "kendisi": {
-      "ad": "",
-      "telefon": ""
+      "ad": "Yusuf Boyraz",
+      "telefon": "05541714458"
     },
     "yakinlar": [
       {
-        "ad": "",
-        "telefon": ""
+        "ad": "Ebubekir Boyraz (Kardeşi)",
+        "telefon": "05053463474"
       },
       {
         "ad": "",
