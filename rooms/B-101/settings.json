@@ -1,16 +1,17 @@
 {
-  "ad_soyad": "",
+  "ad_soyad": "Suna Kömürcü",
   "oda_no": "B-101",
-  "giris_tarihi": "",
+  "giris_tarihi": "01.01.2020",
+  "tc_kimlik_no": "57115448128",
   "iletisim": {
     "kendisi": {
-      "ad": "",
-      "telefon": ""
+      "ad": "Suna Kömürcü",
+      "telefon": "05372710842"
     },
     "yakinlar": [
       {
-        "ad": "",
-        "telefon": ""
+        "ad": "Bayram Kömürcü (Yeğen)",
+        "telefon": "05352412018"
       },
       {
         "ad": "",
