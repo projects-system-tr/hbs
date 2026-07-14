@@ -123,8 +123,31 @@
     "oda_no": "A-105",
     "ad_soyad": "Ali Topçu",
     "giris_tarihi": "01.01.2020",
+    "tc_kimlik_no": "20378125952",
+    "iletisim": {
+      "kendisi": {
+        "ad": "Ali Topçu",
+        "telefon": "05348448692"
+      },
+      "yakinlar": [
+        {
+          "ad": "",
+          "telefon": ""
+        },
+        {
+          "ad": "",
+          "telefon": ""
+        },
+        {
+          "ad": "",
+          "telefon": ""
+        }
+      ]
+    },
     "hastaliklar": [],
-    "ilaclar": []
+    "ilaclar": [],
+    "ameliyatlar": [],
+    "notlar": ""
   },
   {
     "oda_no": "A-106",
