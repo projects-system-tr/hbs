@@ -1,17 +1,17 @@
 {
-  "ad_soyad": "Ali Kırmalı",
+  "ad_soyad": "Osman Aktepe",
   "oda_no": "C-Z01",
   "giris_tarihi": "05.05.2020",
-  "tc_kimlik_no": "11111111111",
+  "tc_kimlik_no": "11162197132",
   "iletisim": {
     "kendisi": {
-      "ad": "Ali Kırmalı",
+      "ad": "Osman Aktepe",
       "telefon": "050000000000"
     },
     "yakinlar": [
       {
-        "ad": "Ergin Kepenek",
-        "telefon": "05055050505"
+        "ad": "Salih Aktepe (Yeğen)",
+        "telefon": "05365812665"
       },
       {
         "ad": "",
@@ -23,19 +23,8 @@
       }
     ]
   },
-  "ilaclar": [
-    {
-      "ad": "Parol (Parasetamol)",
-      "dozaj": "1 Tablet",
-      "vakit": [
-        "Sabah",
-        "Öğle"
-      ]
-    }
-  ],
-  "hastaliklar": [
-    "Vertigo (Baş Dönmesi)"
-  ],
+  "ilaclar": [],
+  "hastaliklar": [],
   "ameliyatlar": [],
   "notlar": ""
 }
