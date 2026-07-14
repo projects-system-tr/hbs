@@ -1,17 +1,17 @@
 {
-  "ad_soyad": "Eşref Kızılay",
+  "ad_soyad": "",
   "oda_no": "A-Z12",
-  "giris_tarihi": "01.01.2020",
-  "tc_kimlik_no": "60247356148",
+  "giris_tarihi": "",
+  "tc_kimlik_no": "",
   "iletisim": {
     "kendisi": {
-      "ad": "Eşref Kızılay",
-      "telefon": "05300980758"
+      "ad": "",
+      "telefon": ""
     },
     "yakinlar": [
       {
-        "ad": "Murat Kızılay (Oğlu)",
-        "telefon": "05359483966"
+        "ad": "",
+        "telefon": ""
       },
       {
         "ad": "",
