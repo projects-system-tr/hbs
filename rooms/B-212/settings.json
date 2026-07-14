@@ -1,16 +1,17 @@
 {
-  "ad_soyad": "",
+  "ad_soyad": "Nafiye Yıldırım",
   "oda_no": "B-212",
-  "giris_tarihi": "",
+  "giris_tarihi": "01.01.2020",
+  "tc_kimlik_no": "32125727470",
   "iletisim": {
     "kendisi": {
-      "ad": "",
+      "ad": "Nafiye Yıldırım",
       "telefon": ""
     },
     "yakinlar": [
       {
-        "ad": "",
-        "telefon": ""
+        "ad": "Ahmet Koruç (Enişte)",
+        "telefon": "05323922420"
       },
       {
         "ad": "",
