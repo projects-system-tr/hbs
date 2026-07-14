@@ -1,20 +1,21 @@
 {
-  "ad_soyad": "",
+  "ad_soyad": "Emine Kutluca",
   "oda_no": "B-206",
-  "giris_tarihi": "",
+  "giris_tarihi": "01.01.2020",
+  "tc_kimlik_no": "11990396660",
   "iletisim": {
     "kendisi": {
-      "ad": "",
+      "ad": "Emine Kutluca",
       "telefon": ""
     },
     "yakinlar": [
       {
-        "ad": "",
-        "telefon": ""
+        "ad": "Kerim Göçeri (Yeğen)",
+        "telefon": "05438080997"
       },
       {
-        "ad": "",
-        "telefon": ""
+        "ad": "Yahya Göçeri (Yeğen)",
+        "telefon": "05057483756"
       },
       {
         "ad": "",
