@@ -1,16 +1,17 @@
 {
-  "ad_soyad": "",
+  "ad_soyad": "Ali Kırmalı",
   "oda_no": "C-Z01",
-  "giris_tarihi": "",
+  "giris_tarihi": "05.05.2020",
+  "tc_kimlik_no": "11111111111",
   "iletisim": {
     "kendisi": {
-      "ad": "",
-      "telefon": ""
+      "ad": "Ali Kırmalı",
+      "telefon": "050000000000"
     },
     "yakinlar": [
       {
-        "ad": "",
-        "telefon": ""
+        "ad": "Ergin Kepenek",
+        "telefon": "05055050505"
       },
       {
         "ad": "",
@@ -22,8 +23,19 @@
       }
     ]
   },
-  "ilaclar": [],
-  "hastaliklar": [],
+  "ilaclar": [
+    {
+      "ad": "Parol (Parasetamol)",
+      "dozaj": "1 Tablet",
+      "vakit": [
+        "Sabah",
+        "Öğle"
+      ]
+    }
+  ],
+  "hastaliklar": [
+    "Vertigo (Baş Dönmesi)"
+  ],
   "ameliyatlar": [],
   "notlar": ""
 }
