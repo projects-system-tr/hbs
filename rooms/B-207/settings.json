@@ -1,20 +1,21 @@
 {
-  "ad_soyad": "",
+  "ad_soyad": "Yüksel Göreceğiz",
   "oda_no": "B-207",
-  "giris_tarihi": "",
+  "giris_tarihi": "01.01.2020",
+  "tc_kimlik_no": "14654307088",
   "iletisim": {
     "kendisi": {
-      "ad": "",
-      "telefon": ""
+      "ad": "Yüksel Göreceğiz",
+      "telefon": "05330278349"
     },
     "yakinlar": [
       {
-        "ad": "",
-        "telefon": ""
+        "ad": "Kibar Toker (Gelin)",
+        "telefon": "05548411770"
       },
       {
-        "ad": "",
-        "telefon": ""
+        "ad": "Songül Gülmüş (Kardeşinin Eşi)",
+        "telefon": "05352802537"
       },
       {
         "ad": "",
