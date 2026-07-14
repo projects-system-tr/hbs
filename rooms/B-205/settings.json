@@ -1,20 +1,21 @@
 {
-  "ad_soyad": "",
+  "ad_soyad": "Rahime Özyürek",
   "oda_no": "B-205",
-  "giris_tarihi": "",
+  "giris_tarihi": "01.01.2020",
+  "tc_kimlik_no": "29470812968",
   "iletisim": {
     "kendisi": {
-      "ad": "",
+      "ad": "Rahime Özyürek",
       "telefon": ""
     },
     "yakinlar": [
       {
-        "ad": "",
-        "telefon": ""
+        "ad": "Suphi Özyürek (Kardeş)",
+        "telefon": "05333772254"
       },
       {
-        "ad": "",
-        "telefon": ""
+        "ad": "Demet Özyürek (Gelin)",
+        "telefon": "05315569276"
       },
       {
         "ad": "",
