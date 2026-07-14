@@ -1,16 +1,17 @@
 {
-  "ad_soyad": "",
+  "ad_soyad": "Sirer Ağca",
   "oda_no": "A-203",
-  "giris_tarihi": "",
+  "giris_tarihi": "01.01.2020",
+  "tc_kimlik_no": "46879234610",
   "iletisim": {
     "kendisi": {
-      "ad": "",
-      "telefon": ""
+      "ad": "Sirer Ağca",
+      "telefon": "05413008223"
     },
     "yakinlar": [
       {
-        "ad": "",
-        "telefon": ""
+        "ad": "Şerife Hanım (Yeğeni)",
+        "telefon": "05054881027"
       },
       {
         "ad": "",
