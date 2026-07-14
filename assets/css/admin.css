@@ -291,16 +291,39 @@ fieldset label:last-child { margin-bottom: 0; }
 
 /* ---------- Yazdırma (Print) ---------- */
 @media print {
-  @page { size: landscape; margin: 12mm; }
+  @page { size: landscape; margin: 8mm; }
   .site-header, .admin-ust-cubuk, .site-footer,
   #baglanti-paneli, #oda-secim-paneli, #duzenle-paneli,
   .rapor-filtre-satiri, #rapor-yazdir, #rapor-durum, .panel-ust-satir {
     display: none !important;
   }
   body { background: #fff; }
-  .rapor-baslik-yazdirma { display: block; font-family: var(--font-baslik); margin-bottom: 12px; }
+  .rapor-baslik-yazdirma { display: block; font-family: var(--font-baslik); margin-bottom: 10px; font-size: 15px; }
   #raporlar-paneli { border: none; padding: 0; }
-  main#admin-app { max-width: 100%; padding: 0; }
-  .rapor-tablo { font-size: 10px; }
-  .rapor-tablo th, .rapor-tablo td { padding: 4px 6px; }
+  main#admin-app, main#admin-app.main-genis { max-width: 100%; padding: 0; }
+  .rapor-yazdirilacak { overflow: visible; }
+
+  .rapor-tablo {
+    font-size: 8.5px;
+    table-layout: fixed;
+    width: 100%;
+  }
+  .rapor-tablo th, .rapor-tablo td {
+    padding: 3px 4px;
+    white-space: normal;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    max-width: none;
+  }
+  /* Sütun genişlikleri toplamı %100 olacak şekilde sabitlenir, taşma olmaz */
+  .rapor-tablo th:nth-child(1), .rapor-tablo td:nth-child(1) { width: 10%; }  /* Ad Soyadı */
+  .rapor-tablo th:nth-child(2), .rapor-tablo td:nth-child(2) { width: 6%; }   /* Oda No */
+  .rapor-tablo th:nth-child(3), .rapor-tablo td:nth-child(3) { width: 8%; }   /* Giriş Tarihi */
+  .rapor-tablo th:nth-child(4), .rapor-tablo td:nth-child(4) { width: 9%; }   /* T.C. Kimlik No */
+  .rapor-tablo th:nth-child(5), .rapor-tablo td:nth-child(5) { width: 9%; }   /* Telefon (Kendisi) */
+  .rapor-tablo th:nth-child(6), .rapor-tablo td:nth-child(6) { width: 13%; }  /* Yakın Telefonları */
+  .rapor-tablo th:nth-child(7), .rapor-tablo td:nth-child(7) { width: 11%; }  /* Hastalıklar */
+  .rapor-tablo th:nth-child(8), .rapor-tablo td:nth-child(8) { width: 13%; }  /* Aktif İlaçlar */
+  .rapor-tablo th:nth-child(9), .rapor-tablo td:nth-child(9) { width: 11%; }  /* Geçmiş Ameliyatlar */
+  .rapor-tablo th:nth-child(10), .rapor-tablo td:nth-child(10) { width: 10%; } /* Notlar */
 }
