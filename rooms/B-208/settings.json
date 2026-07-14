@@ -1,20 +1,21 @@
 {
-  "ad_soyad": "",
+  "ad_soyad": "Hatice Ertaş",
   "oda_no": "B-208",
-  "giris_tarihi": "",
+  "giris_tarihi": "01.01.2020",
+  "tc_kimlik_no": "59242204660",
   "iletisim": {
     "kendisi": {
-      "ad": "",
+      "ad": "Hatice Ertaş",
       "telefon": ""
     },
     "yakinlar": [
       {
-        "ad": "",
-        "telefon": ""
+        "ad": "Ahmet Çiftçi (Kardeşi)",
+        "telefon": "05344337658"
       },
       {
-        "ad": "",
-        "telefon": ""
+        "ad": "Yalçın Çiftçi (Yeğen)",
+        "telefon": "05368384248"
       },
       {
         "ad": "",
