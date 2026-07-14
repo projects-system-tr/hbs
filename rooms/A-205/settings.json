@@ -1,16 +1,17 @@
 {
-  "ad_soyad": "",
+  "ad_soyad": "Bülent Olcar",
   "oda_no": "A-205",
-  "giris_tarihi": "",
+  "giris_tarihi": "01.01.2020",
+  "tc_kimlik_no": "10622770656",
   "iletisim": {
     "kendisi": {
-      "ad": "",
-      "telefon": ""
+      "ad": "Bülent Olcar",
+      "telefon": "05424524083"
     },
     "yakinlar": [
       {
-        "ad": "",
-        "telefon": ""
+        "ad": "Nurcan Bedir (Kardeşi)",
+        "telefon": "05336724785"
       },
       {
         "ad": "",
