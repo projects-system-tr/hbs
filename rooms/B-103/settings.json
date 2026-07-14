@@ -1,7 +1,8 @@
 {
-  "ad_soyad": "",
+  "ad_soyad": "Zeynep Gürkan",
   "oda_no": "B-103",
-  "giris_tarihi": "",
+  "giris_tarihi": "01.01.2020",
+  "tc_kimlik_no": "58732405846",
   "iletisim": {
     "kendisi": {
       "ad": "",
@@ -9,8 +10,8 @@
     },
     "yakinlar": [
       {
-        "ad": "",
-        "telefon": ""
+        "ad": "Bünyamin Gürkan (Vasisi)",
+        "telefon": "05422179819"
       },
       {
         "ad": "",
