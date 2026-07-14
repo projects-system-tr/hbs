@@ -1,16 +1,17 @@
 {
-  "ad_soyad": "",
+  "ad_soyad": "Emine Demir",
   "oda_no": "B-107",
-  "giris_tarihi": "",
+  "giris_tarihi": "01.01.2020",
+  "tc_kimlik_no": "43846336490",
   "iletisim": {
     "kendisi": {
-      "ad": "",
+      "ad": "Emine Demir",
       "telefon": ""
     },
     "yakinlar": [
       {
-        "ad": "",
-        "telefon": ""
+        "ad": "Abdullah Kaya (Yeğen)",
+        "telefon": "05336850268"
       },
       {
         "ad": "",
