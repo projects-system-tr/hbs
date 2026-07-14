@@ -1,16 +1,17 @@
 {
-  "ad_soyad": "",
+  "ad_soyad": "İsmail Gençer",
   "oda_no": "A-111",
-  "giris_tarihi": "",
+  "giris_tarihi": "01.01.2020",
+  "tc_kimlik_no": "45361284126",
   "iletisim": {
     "kendisi": {
-      "ad": "",
-      "telefon": ""
+      "ad": "İsmail Gençer",
+      "telefon": "05304463583"
     },
     "yakinlar": [
       {
-        "ad": "",
-        "telefon": ""
+        "ad": "Murat Gençer (Yeğeni)",
+        "telefon": "05375690786"
       },
       {
         "ad": "",
