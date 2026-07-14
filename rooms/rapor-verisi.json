@@ -1,50 +1,10 @@
 [
   {
     "oda_no": "A-101",
-    "ad_soyad": "Ahmet ANDİÇ",
-    "giris_tarihi": "10.06.2022",
-    "hastaliklar": [
-      "KOAH (Kronik Obstrüktif Akciğer Hastalığı)",
-      "Tip 2 Diyabet (Şeker Hastalığı)"
-    ],
-    "ilaclar": [
-      {
-        "ad": "Parol (Parasetamol)",
-        "dozaj": "1 Tablet",
-        "vakit": [
-          "Sabah",
-          "Öğle",
-          "Akşam",
-          "Gece"
-        ]
-      },
-      {
-        "ad": "Aspirin (Asetilsalisilik Asit)",
-        "dozaj": "1 Tablet",
-        "vakit": [
-          "Sabah",
-          "Öğle"
-        ]
-      },
-      {
-        "ad": "Eliquis (Apiksaban)",
-        "dozaj": "1 Tablet",
-        "vakit": [
-          "Öğle",
-          "Akşam"
-        ]
-      },
-      {
-        "ad": "Lantus (İnsülin Glarjin)",
-        "dozaj": "3 Tablet",
-        "vakit": [
-          "Sabah",
-          "Öğle",
-          "Akşam",
-          "Gece"
-        ]
-      }
-    ]
+    "ad_soyad": "Cihat Karakaş",
+    "giris_tarihi": "01.01.2020",
+    "hastaliklar": [],
+    "ilaclar": []
   },
   {
     "oda_no": "A-102",
