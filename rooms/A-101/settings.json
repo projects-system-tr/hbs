@@ -1,17 +1,17 @@
 {
-  "ad_soyad": "Ahmet ANDİÇ",
+  "ad_soyad": "Cihat Karakaş",
   "oda_no": "A-101",
-  "giris_tarihi": "10.06.2022",
-  "tc_kimlik_no": "11111111111",
+  "giris_tarihi": "01.01.2020",
+  "tc_kimlik_no": "27538623488",
   "iletisim": {
     "kendisi": {
-      "ad": "Ahmet ANDİÇ",
-      "telefon": "05319937433"
+      "ad": "Cihat Karakaş",
+      "telefon": "05304041797"
     },
     "yakinlar": [
       {
-        "ad": "",
-        "telefon": ""
+        "ad": "Sami Karakaş (Kardeşi)",
+        "telefon": "05335720486"
       },
       {
         "ad": "",
@@ -23,50 +23,8 @@
       }
     ]
   },
-  "ilaclar": [
-    {
-      "ad": "Parol (Parasetamol)",
-      "dozaj": "1 Tablet",
-      "vakit": [
-        "Sabah",
-        "Öğle",
-        "Akşam",
-        "Gece"
-      ]
-    },
-    {
-      "ad": "Aspirin (Asetilsalisilik Asit)",
-      "dozaj": "1 Tablet",
-      "vakit": [
-        "Sabah",
-        "Öğle"
-      ]
-    },
-    {
-      "ad": "Eliquis (Apiksaban)",
-      "dozaj": "1 Tablet",
-      "vakit": [
-        "Öğle",
-        "Akşam"
-      ]
-    },
-    {
-      "ad": "Lantus (İnsülin Glarjin)",
-      "dozaj": "3 Tablet",
-      "vakit": [
-        "Sabah",
-        "Öğle",
-        "Akşam",
-        "Gece"
-      ]
-    }
-  ],
-  "hastaliklar": [
-    "KOAH (Kronik Obstrüktif Akciğer Hastalığı)",
-    "Tip 2 Diyabet (Şeker Hastalığı)"
-  ],
-  "ameliyatlar": [
-    "Septoplasti"
-  ],
+  "ilaclar": [],
+  "hastaliklar": [],
+  "ameliyatlar": [],
   "notlar": ""
 }
