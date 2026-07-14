@@ -1,16 +1,17 @@
 {
-  "ad_soyad": "",
+  "ad_soyad": "Hasan Arzuman",
   "oda_no": "C-Z10",
-  "giris_tarihi": "",
+  "giris_tarihi": "01.01.2020",
+  "tc_kimlik_no": "49240537600",
   "iletisim": {
     "kendisi": {
-      "ad": "",
+      "ad": "Hasan Arzuman",
       "telefon": ""
     },
     "yakinlar": [
       {
-        "ad": "",
-        "telefon": ""
+        "ad": "Hasan Arzuman (Yeğen)",
+        "telefon": "05365530458"
       },
       {
         "ad": "",
