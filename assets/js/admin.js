@@ -153,6 +153,7 @@
     document.getElementById("oda-secim-paneli").classList.add("hidden");
     document.getElementById("duzenle-paneli").classList.add("hidden");
     document.getElementById("raporlar-paneli").classList.add("hidden");
+    document.getElementById("kullanicilar-paneli").classList.add("hidden");
     document.getElementById("baglanti-paneli").classList.remove("hidden");
     durumGizle(baglantiDurum);
   });
@@ -630,8 +631,12 @@
         oda_no: odaKodu,
         ad_soyad: veri.ad_soyad || "",
         giris_tarihi: veri.giris_tarihi || "",
+        tc_kimlik_no: veri.tc_kimlik_no || "",
+        iletisim: veri.iletisim || { kendisi: { ad: "", telefon: "" }, yakinlar: [] },
         hastaliklar: veri.hastaliklar || [],
         ilaclar: veri.ilaclar || [],
+        ameliyatlar: veri.ameliyatlar || [],
+        notlar: veri.notlar || "",
       };
       var bulundu = false;
       liste = liste.map(function (k) {
@@ -710,26 +715,40 @@
     return zincir;
   }
 
-  // ---------- 6) Sekmeler: Oda Düzenle / Toplu Raporlar ----------
+  // ---------- 6) Sekmeler: Oda Düzenle / Toplu Raporlar / Kullanıcılar ----------
   var sekmeDuzenle = document.getElementById("sekme-duzenle");
   var sekmeRaporlar = document.getElementById("sekme-raporlar");
+  var sekmeKullanicilar = document.getElementById("sekme-kullanicilar");
   var raporlarPaneli = document.getElementById("raporlar-paneli");
+  var kullanicilarPaneli = document.getElementById("kullanicilar-paneli");
   var RAPOR_VERISI = null;
 
-  sekmeDuzenle.addEventListener("click", function () {
-    sekmeDuzenle.classList.add("sekme-aktif");
-    sekmeRaporlar.classList.remove("sekme-aktif");
+  function tumSekmeleriGizle() {
+    [sekmeDuzenle, sekmeRaporlar, sekmeKullanicilar].forEach(function (s) { s.classList.remove("sekme-aktif"); });
+    document.getElementById("oda-secim-paneli").classList.add("hidden");
+    document.getElementById("duzenle-paneli").classList.add("hidden");
     raporlarPaneli.classList.add("hidden");
+    kullanicilarPaneli.classList.add("hidden");
+  }
+
+  sekmeDuzenle.addEventListener("click", function () {
+    tumSekmeleriGizle();
+    sekmeDuzenle.classList.add("sekme-aktif");
     document.getElementById("oda-secim-paneli").classList.remove("hidden");
   });
 
   sekmeRaporlar.addEventListener("click", function () {
+    tumSekmeleriGizle();
     sekmeRaporlar.classList.add("sekme-aktif");
-    sekmeDuzenle.classList.remove("sekme-aktif");
-    document.getElementById("oda-secim-paneli").classList.add("hidden");
-    document.getElementById("duzenle-paneli").classList.add("hidden");
     raporlarPaneli.classList.remove("hidden");
     raporYukle();
+  });
+
+  sekmeKullanicilar.addEventListener("click", function () {
+    tumSekmeleriGizle();
+    sekmeKullanicilar.classList.add("sekme-aktif");
+    kullanicilarPaneli.classList.remove("hidden");
+    kullanicilariYukle();
   });
 
   function raporYukle() {
@@ -773,12 +792,30 @@
       })
       .forEach(function (k) {
         var tr = document.createElement("tr");
+        var kendisi = (k.iletisim && k.iletisim.kendisi) || {};
+        var yakinlar = (k.iletisim && k.iletisim.yakinlar) || [];
+        var yakinMetni = yakinlar
+          .filter(function (y) { return y && (y.ad || y.telefon); })
+          .map(function (y) { return (y.ad || "İsimsiz") + ": " + (y.telefon || "—"); })
+          .join("; ") || "—";
 
         var tdAd = document.createElement("td");
         tdAd.textContent = k.ad_soyad;
 
         var tdOda = document.createElement("td");
         tdOda.textContent = k.oda_no;
+
+        var tdGiris = document.createElement("td");
+        tdGiris.textContent = k.giris_tarihi || "—";
+
+        var tdTc = document.createElement("td");
+        tdTc.textContent = k.tc_kimlik_no || "—";
+
+        var tdTelKendisi = document.createElement("td");
+        tdTelKendisi.textContent = kendisi.telefon || "—";
+
+        var tdTelYakin = document.createElement("td");
+        tdTelYakin.textContent = yakinMetni;
 
         var tdHastalik = document.createElement("td");
         tdHastalik.textContent = (k.hastaliklar || []).join(", ") || "—";
@@ -790,10 +827,22 @@
           return i.ad + (detay ? " (" + detay + ")" : "");
         }).join("; ") || "—";
 
+        var tdAmeliyat = document.createElement("td");
+        tdAmeliyat.textContent = (k.ameliyatlar || []).join("; ") || "—";
+
+        var tdNotlar = document.createElement("td");
+        tdNotlar.textContent = k.notlar || "—";
+
         tr.appendChild(tdAd);
         tr.appendChild(tdOda);
+        tr.appendChild(tdGiris);
+        tr.appendChild(tdTc);
+        tr.appendChild(tdTelKendisi);
+        tr.appendChild(tdTelYakin);
         tr.appendChild(tdHastalik);
         tr.appendChild(tdIlac);
+        tr.appendChild(tdAmeliyat);
+        tr.appendChild(tdNotlar);
         govde.appendChild(tr);
       });
   }
@@ -805,4 +854,120 @@
   document.getElementById("rapor-yazdir").addEventListener("click", function () {
     window.print();
   });
+
+  // ---------- 7) Kullanıcılar (index.html giriş ekranı) ----------
+  // NOT: Bu, index.html başındaki basit "caydırıcı" giriş ekranı içindir;
+  // GitHub bağlantı token'ıyla ilgisi yoktur ve gerçek bir sunucu tarafı
+  // yetkilendirme değildir.
+  function hashUret(metin) {
+    var kodlayici = new TextEncoder();
+    return crypto.subtle.digest("SHA-256", kodlayici.encode(metin)).then(function (buffer) {
+      return Array.prototype.map.call(new Uint8Array(buffer), function (b) {
+        return b.toString(16).padStart(2, "0");
+      }).join("");
+    });
+  }
+
+  function tuzUret() {
+    var dizi = new Uint8Array(16);
+    crypto.getRandomValues(dizi);
+    return Array.prototype.map.call(dizi, function (b) { return b.toString(16).padStart(2, "0"); }).join("");
+  }
+
+  var KULLANICILAR = [];
+
+  function kullanicilariYukle() {
+    var durum = document.getElementById("kullanici-durum");
+    durumGoster(durum, "Kullanıcılar yükleniyor…", "bilgi");
+    ghGet("kullanicilar.json")
+      .then(function (dosya) {
+        KULLANICILAR = dosya ? JSON.parse(b64DecodeUnicode(dosya.content)) : [];
+        durumGizle(durum);
+        kullanicilariCiz();
+      })
+      .catch(function (err) {
+        durumGoster(durum, err.message, "hata");
+      });
+  }
+
+  function kullanicilariCiz() {
+    var kutu = document.getElementById("kullanici-liste");
+    kutu.innerHTML = "";
+    KULLANICILAR.forEach(function (k) {
+      var satir = document.createElement("div");
+      satir.className = "kullanici-satir";
+      var ad = document.createElement("span");
+      ad.textContent = k.kullanici_adi;
+      var silBtn = document.createElement("button");
+      silBtn.type = "button";
+      silBtn.className = "tehlike-buton";
+      silBtn.textContent = "Sil";
+      silBtn.addEventListener("click", function () { kullaniciSil(k.kullanici_adi); });
+      satir.appendChild(ad);
+      satir.appendChild(silBtn);
+      kutu.appendChild(satir);
+    });
+  }
+
+  function kullanicilariKaydet(mesaj) {
+    return ghGet("kullanicilar.json").then(function (dosya) {
+      var sha = dosya ? dosya.sha : null;
+      var icerik = b64EncodeUnicode(JSON.stringify(KULLANICILAR, null, 2));
+      return ghPut("kullanicilar.json", icerik, mesaj, sha);
+    });
+  }
+
+  document.getElementById("kullanici-ekle-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var durum = document.getElementById("kullanici-durum");
+    var ekleButon = document.getElementById("kullanici-ekle-buton");
+    var kullaniciAdi = document.getElementById("ku-kullanici-adi").value.trim();
+    var sifre = document.getElementById("ku-sifre").value;
+
+    if (!kullaniciAdi || !sifre) return;
+    if (KULLANICILAR.some(function (k) { return k.kullanici_adi === kullaniciAdi; })) {
+      durumGoster(durum, "Bu kullanıcı adı zaten var.", "hata");
+      return;
+    }
+
+    ekleButon.disabled = true;
+    durumGoster(durum, "Ekleniyor…", "bilgi");
+
+    var tuz = tuzUret();
+    hashUret(tuz + sifre)
+      .then(function (hash) {
+        KULLANICILAR.push({ kullanici_adi: kullaniciAdi, tuz: tuz, sifre_hash: hash });
+        return kullanicilariKaydet("Kullanıcı eklendi: " + kullaniciAdi);
+      })
+      .then(function () {
+        durumGoster(durum, "Kullanıcı eklendi ✓", "basarili");
+        document.getElementById("ku-kullanici-adi").value = "";
+        document.getElementById("ku-sifre").value = "";
+        kullanicilariCiz();
+      })
+      .catch(function (err) {
+        KULLANICILAR = KULLANICILAR.filter(function (k) { return k.kullanici_adi !== kullaniciAdi; });
+        durumGoster(durum, err.message, "hata");
+      })
+      .finally(function () {
+        ekleButon.disabled = false;
+      });
+  });
+
+  function kullaniciSil(kullaniciAdi) {
+    var durum = document.getElementById("kullanici-durum");
+    var yedek = KULLANICILAR;
+    KULLANICILAR = KULLANICILAR.filter(function (k) { return k.kullanici_adi !== kullaniciAdi; });
+    durumGoster(durum, "Siliniyor…", "bilgi");
+    kullanicilariKaydet("Kullanıcı silindi: " + kullaniciAdi)
+      .then(function () {
+        durumGoster(durum, "Kullanıcı silindi ✓", "basarili");
+        kullanicilariCiz();
+      })
+      .catch(function (err) {
+        KULLANICILAR = yedek;
+        durumGoster(durum, err.message, "hata");
+        kullanicilariCiz();
+      });
+  }
 })();
