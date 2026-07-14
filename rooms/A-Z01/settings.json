@@ -23,18 +23,8 @@
       }
     ]
   },
-  "ilaclar": [
-    {
-      "ad": "Glucophage",
-      "dozaj": "1 Tablet",
-      "vakit": [
-        "Sabah"
-      ]
-    }
-  ],
-  "hastaliklar": [
-    "Gerilim Tipi Baş Ağrısı"
-  ],
+  "ilaclar": [],
+  "hastaliklar": [],
   "ameliyatlar": [],
   "notlar": ""
 }
