@@ -1,16 +1,17 @@
 {
-  "ad_soyad": "",
+  "ad_soyad": "Tuncer Ural",
   "oda_no": "C-Z11",
-  "giris_tarihi": "",
+  "giris_tarihi": "01.01.2020",
+  "tc_kimlik_no": "52039061040",
   "iletisim": {
     "kendisi": {
-      "ad": "",
-      "telefon": ""
+      "ad": "Tuncer Ural",
+      "telefon": "05518626155"
     },
     "yakinlar": [
       {
-        "ad": "",
-        "telefon": ""
+        "ad": "Sevim Tüfekçi (Kızı)",
+        "telefon": "05306881189"
       },
       {
         "ad": "",
