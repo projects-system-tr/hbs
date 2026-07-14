@@ -1,16 +1,17 @@
 {
-  "ad_soyad": "",
+  "ad_soyad": "Hüseyin Oyman",
   "oda_no": "A-Z08",
-  "giris_tarihi": "",
+  "giris_tarihi": "01.01.2020",
+  "tc_kimlik_no": "15341491738",
   "iletisim": {
     "kendisi": {
-      "ad": "",
-      "telefon": ""
+      "ad": "Hüseyin Oyman",
+      "telefon": "05079827438"
     },
     "yakinlar": [
       {
-        "ad": "",
-        "telefon": ""
+        "ad": "Ali Osman Taşanlıgil (Yeğeni)",
+        "telefon": "05352548560"
       },
       {
         "ad": "",
