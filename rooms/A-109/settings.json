@@ -1,16 +1,17 @@
 {
-  "ad_soyad": "",
+  "ad_soyad": "Bayram Kurt",
   "oda_no": "A-109",
-  "giris_tarihi": "",
+  "giris_tarihi": "01.01.2020",
+  "tc_kimlik_no": "33677121662",
   "iletisim": {
     "kendisi": {
-      "ad": "",
-      "telefon": ""
+      "ad": "Bayram Kurt",
+      "telefon": "05399801049"
     },
     "yakinlar": [
       {
-        "ad": "",
-        "telefon": ""
+        "ad": "Cihat Kurt (Kardeşi)",
+        "telefon": "05337667083"
       },
       {
         "ad": "",
