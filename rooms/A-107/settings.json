@@ -1,20 +1,21 @@
 {
-  "ad_soyad": "",
+  "ad_soyad": "Sami Ermiş",
   "oda_no": "A-107",
-  "giris_tarihi": "",
+  "giris_tarihi": "01.01.2020",
+  "tc_kimlik_no": "55426494278",
   "iletisim": {
     "kendisi": {
-      "ad": "",
+      "ad": "Sami Ermiş",
       "telefon": ""
     },
     "yakinlar": [
       {
-        "ad": "",
-        "telefon": ""
+        "ad": "Şerife Ermiş (Kızı)",
+        "telefon": "05449291890"
       },
       {
-        "ad": "",
-        "telefon": ""
+        "ad": "Şaban Ermiş (Oğlu)",
+        "telefon": "05427694064"
       },
       {
         "ad": "",
