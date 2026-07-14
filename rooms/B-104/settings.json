@@ -1,15 +1,16 @@
 {
-  "ad_soyad": "",
+  "ad_soyad": "Menekşe Şimşek",
   "oda_no": "B-104",
-  "giris_tarihi": "",
+  "giris_tarihi": "01.01.2020",
+  "tc_kimlik_no": "38887499624",
   "iletisim": {
     "kendisi": {
-      "ad": "",
-      "telefon": ""
+      "ad": "Menekşe Şimşek",
+      "telefon": "05469662288"
     },
     "yakinlar": [
       {
-        "ad": "",
+        "ad": "Kadir Şimşek (Oğlu)",
         "telefon": ""
       },
       {
