@@ -1,16 +1,17 @@
 {
-  "ad_soyad": "",
+  "ad_soyad": "Ayşe Tüken",
   "oda_no": "B-102",
-  "giris_tarihi": "",
+  "giris_tarihi": "01.01.2020",
+  "tc_kimlik_no": "27548269126",
   "iletisim": {
     "kendisi": {
-      "ad": "",
-      "telefon": ""
+      "ad": "Ayşe Tüken",
+      "telefon": "05068706442"
     },
     "yakinlar": [
       {
-        "ad": "",
-        "telefon": ""
+        "ad": "Mehmet Kubilay Tüken (Oğlu)",
+        "telefon": "05054376765"
       },
       {
         "ad": "",
