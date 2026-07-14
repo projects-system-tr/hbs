@@ -1,16 +1,17 @@
 {
-  "ad_soyad": "",
+  "ad_soyad": "Türkan Öztürk",
   "oda_no": "B-110",
-  "giris_tarihi": "",
+  "giris_tarihi": "01.01.2020",
+  "tc_kimlik_no": "33139428216",
   "iletisim": {
     "kendisi": {
-      "ad": "",
+      "ad": "Türkan Öztürk",
       "telefon": ""
     },
     "yakinlar": [
       {
-        "ad": "",
-        "telefon": ""
+        "ad": "Murat İnanç (Vasi)",
+        "telefon": "05418252651"
       },
       {
         "ad": "",
