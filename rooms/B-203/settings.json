@@ -1,16 +1,17 @@
 {
-  "ad_soyad": "",
+  "ad_soyad": "Fatma Budak",
   "oda_no": "B-203",
-  "giris_tarihi": "",
+  "giris_tarihi": "01.01.2020",
+  "tc_kimlik_no": "19241401620",
   "iletisim": {
     "kendisi": {
-      "ad": "",
+      "ad": "Fatma Budak",
       "telefon": ""
     },
     "yakinlar": [
       {
-        "ad": "",
-        "telefon": ""
+        "ad": "Semih Budak (Oğlu)",
+        "telefon": "05526769438"
       },
       {
         "ad": "",
