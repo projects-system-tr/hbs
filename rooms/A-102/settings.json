@@ -1,17 +1,17 @@
 {
-  "ad_soyad": "",
+  "ad_soyad": "Ali Ersoy",
   "oda_no": "A-102",
-  "giris_tarihi": "",
-  "tc_kimlik_no": "",
+  "giris_tarihi": "01.01.2020",
+  "tc_kimlik_no": "39614036440",
   "iletisim": {
     "kendisi": {
-      "ad": "",
-      "telefon": ""
+      "ad": "Ali Ersoy",
+      "telefon": "05458724458"
     },
     "yakinlar": [
       {
-        "ad": "",
-        "telefon": ""
+        "ad": "Süleyman Ersoy (Oğlu)",
+        "telefon": "05335043082"
       },
       {
         "ad": "",
