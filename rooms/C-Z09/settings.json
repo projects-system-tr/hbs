@@ -1,20 +1,21 @@
 {
-  "ad_soyad": "",
+  "ad_soyad": "Osman Yeşiltaş",
   "oda_no": "C-Z09",
-  "giris_tarihi": "",
+  "giris_tarihi": "01.01.2020",
+  "tc_kimlik_no": "33881227600",
   "iletisim": {
     "kendisi": {
-      "ad": "",
+      "ad": "Osman Yeşiltaş",
       "telefon": ""
     },
     "yakinlar": [
       {
-        "ad": "",
-        "telefon": ""
+        "ad": "Adem Yeşiltaş (Oğlu)",
+        "telefon": "05392771565"
       },
       {
-        "ad": "",
-        "telefon": ""
+        "ad": "Meryem Yeşiltaş (Kızı)",
+        "telefon": "05307885861"
       },
       {
         "ad": "",
