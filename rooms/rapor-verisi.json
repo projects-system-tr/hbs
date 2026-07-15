@@ -545,8 +545,31 @@
     "oda_no": "C-101",
     "ad_soyad": "Hacı Mustafa Yiğit",
     "giris_tarihi": "01.01.2020",
+    "tc_kimlik_no": "46618243408",
+    "iletisim": {
+      "kendisi": {
+        "ad": "Hacı Mustafa Yiğit",
+        "telefon": "05384163445"
+      },
+      "yakinlar": [
+        {
+          "ad": "Deniz Yiğit (Kızı)",
+          "telefon": "05364516447"
+        },
+        {
+          "ad": "",
+          "telefon": ""
+        },
+        {
+          "ad": "",
+          "telefon": ""
+        }
+      ]
+    },
     "hastaliklar": [],
-    "ilaclar": []
+    "ilaclar": [],
+    "ameliyatlar": [],
+    "notlar": ""
   },
   {
     "oda_no": "C-102",
