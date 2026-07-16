@@ -23,15 +23,7 @@
       }
     ]
   },
-  "ilaclar": [
-    {
-      "ad": "Parol",
-      "dozaj": "1 Tablet",
-      "vakit": [
-        "Öğle"
-      ]
-    }
-  ],
+  "ilaclar": [],
   "hastaliklar": [],
   "ameliyatlar": [],
   "notlar": ""
