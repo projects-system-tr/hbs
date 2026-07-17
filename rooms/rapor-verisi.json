@@ -764,10 +764,33 @@
   },
   {
     "oda_no": "C-Z02",
-    "ad_soyad": "Mevlüt Kaplanbaba",
-    "giris_tarihi": "01.01.2020",
+    "ad_soyad": "",
+    "giris_tarihi": "",
+    "tc_kimlik_no": "",
+    "iletisim": {
+      "kendisi": {
+        "ad": "",
+        "telefon": ""
+      },
+      "yakinlar": [
+        {
+          "ad": "",
+          "telefon": ""
+        },
+        {
+          "ad": "",
+          "telefon": ""
+        },
+        {
+          "ad": "",
+          "telefon": ""
+        }
+      ]
+    },
     "hastaliklar": [],
-    "ilaclar": []
+    "ilaclar": [],
+    "ameliyatlar": [],
+    "notlar": ""
   },
   {
     "oda_no": "C-Z03",
