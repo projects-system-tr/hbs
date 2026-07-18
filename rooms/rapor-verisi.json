@@ -361,10 +361,33 @@
   },
   {
     "oda_no": "A-Z12",
-    "ad_soyad": "",
+    "ad_soyad": "Şeref Kaya",
     "giris_tarihi": "",
+    "tc_kimlik_no": "",
+    "iletisim": {
+      "kendisi": {
+        "ad": "",
+        "telefon": ""
+      },
+      "yakinlar": [
+        {
+          "ad": "",
+          "telefon": ""
+        },
+        {
+          "ad": "",
+          "telefon": ""
+        },
+        {
+          "ad": "",
+          "telefon": ""
+        }
+      ]
+    },
     "hastaliklar": [],
-    "ilaclar": []
+    "ilaclar": [],
+    "ameliyatlar": [],
+    "notlar": ""
   },
   {
     "oda_no": "B-101",
