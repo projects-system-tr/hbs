@@ -11,7 +11,9 @@
   "use strict";
 
   // ---------- Durum ----------
-  var GH = { owner: "", repo: "", branch: "main", token: "" };
+  // Kullanıcı adı / depo / dal sabittir; kullanıcı yalnızca token girer.
+  var GH_SABIT = { owner: "projects-system-tr", repo: "hbs", branch: "main" };
+  var GH = { owner: GH_SABIT.owner, repo: GH_SABIT.repo, branch: GH_SABIT.branch, token: "" };
   var ODA_DIZINI = [];       // rooms/index.json içeriği
   var INDEX_SHA = null;      // index.json'un mevcut sha'sı (güncelleme için gerekli)
   var SECILI_ODA = null;     // şu an düzenlenen oda kodu
@@ -106,9 +108,6 @@
     var kayitli = sessionStorage.getItem("gh_admin_ayar");
     if (kayitli) {
       var k = JSON.parse(kayitli);
-      document.getElementById("gh-owner").value = k.owner || "";
-      document.getElementById("gh-repo").value = k.repo || "";
-      document.getElementById("gh-branch").value = k.branch || "main";
       document.getElementById("gh-token").value = k.token || "";
       document.getElementById("gh-hatirla").checked = true;
     }
@@ -116,14 +115,14 @@
 
   baglantiForm.addEventListener("submit", function (e) {
     e.preventDefault();
-    GH.owner = document.getElementById("gh-owner").value.trim();
-    GH.repo = document.getElementById("gh-repo").value.trim();
-    GH.branch = document.getElementById("gh-branch").value.trim() || "main";
+    GH.owner = GH_SABIT.owner;
+    GH.repo = GH_SABIT.repo;
+    GH.branch = GH_SABIT.branch;
     GH.token = document.getElementById("gh-token").value.trim();
 
     if (document.getElementById("gh-hatirla").checked) {
       try {
-        sessionStorage.setItem("gh_admin_ayar", JSON.stringify(GH));
+        sessionStorage.setItem("gh_admin_ayar", JSON.stringify({ token: GH.token }));
       } catch (e) { /* yok say */ }
     } else {
       try { sessionStorage.removeItem("gh_admin_ayar"); } catch (e) { /* yok say */ }
