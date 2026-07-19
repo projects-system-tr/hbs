@@ -40,49 +40,35 @@
 
 <main id="admin-app">
 
-  <!-- 1) Bağlantı ayarları -->
-  <section id="baglanti-paneli" class="panel admin-panel">
-    <h2>GitHub Bağlantısı</h2>
-    <p class="admin-aciklama">
-      Bu panel, girdiğiniz bilgileri doğrudan GitHub deponuza commit olarak
-      kaydeder. Sunucu yoktur — her kayıt, sizin adınıza atılmış bir GitHub
-      commit'idir.
-    </p>
+  <!-- 1) Giriş -->
+  <section id="baglanti-paneli" class="panel admin-panel giris-paneli">
+    <div class="giris-kutu">
+      <h2 class="giris-baslik">Sivas Huzurevi Yaşlı Bakım ve Rehabilitasyon Merkezi</h2>
+      <p class="giris-alt-baslik">Yönetim Paneli Giriş Ekranı</p>
 
-    <div class="uyari uyari-guvenlik">
-      <svg class="ikon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" style="margin-top:2px;flex-shrink:0;"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-      <span>
-        <strong>Güvenlik:</strong> Kullanacağınız token, yalnızca bu tarayıcı
-        sekmesinde kalır; hiçbir yere kaydedilmez/gönderilmez (isterseniz
-        aşağıdaki kutuyla bu cihazda hatırlanmasını sağlayabilirsiniz).
-        Token oluştururken <strong>Fine-grained personal access token</strong>
-        kullanın, yalnızca bu depoyu seçin ve yalnızca
-        <strong>Contents: Read and write</strong> iznini verin. Bu token'ı
-        kimseyle paylaşmayın.
-      </span>
+      <div class="uyari uyari-guvenlik">
+        <svg class="ikon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" style="margin-top:2px;flex-shrink:0;"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        <span>
+          <strong>Güvenlik:</strong> Kullanacağınız token, yalnızca bu tarayıcı
+          sekmesinde kalır; hiçbir yere kaydedilmez/gönderilmez (isterseniz
+          aşağıdaki kutuyla bu cihazda hatırlanmasını sağlayabilirsiniz). Bu
+          token'ı kimseyle paylaşmayın.
+        </span>
+      </div>
+
+      <form id="baglanti-form">
+        <label>Erişim Token'ı (Personal Access Token)
+          <input type="password" id="gh-token" placeholder="github_pat_..." required>
+        </label>
+        <label class="hatirla-satiri">
+          <input type="checkbox" id="gh-hatirla">
+          Token'ı bu cihazda hatırla (paylaşılan bilgisayarda önerilmez)
+        </label>
+        <button type="submit" id="baglan-buton">Giriş Yap</button>
+      </form>
+
+      <p id="baglanti-durum" class="durum-mesaji hidden"></p>
     </div>
-
-    <form id="baglanti-form">
-      <label>GitHub Kullanıcı Adı / Organizasyon
-        <input type="text" id="gh-owner" placeholder="örn: sivashuzurevi" required>
-      </label>
-      <label>Depo (Repo) Adı
-        <input type="text" id="gh-repo" placeholder="örn: sakin-bilgi-sistemi" required>
-      </label>
-      <label>Dal (Branch)
-        <input type="text" id="gh-branch" value="main" required>
-      </label>
-      <label>Erişim Token'ı (Personal Access Token)
-        <input type="password" id="gh-token" placeholder="github_pat_..." required>
-      </label>
-      <label class="hatirla-satiri">
-        <input type="checkbox" id="gh-hatirla">
-        Token'ı bu cihazda hatırla (paylaşılan bilgisayarda önerilmez)
-      </label>
-      <button type="submit" id="baglan-buton">Bağlan</button>
-    </form>
-
-    <p id="baglanti-durum" class="durum-mesaji hidden"></p>
   </section>
 
   <!-- 2) Oda arama -->
