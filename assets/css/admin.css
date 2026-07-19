@@ -96,6 +96,39 @@ input[type="file"] { padding: 10px 12px; cursor: pointer; }
 .tehlike-buton-dolu:hover { background: var(--acil-koyu); }
 .tehlike-buton-dolu:active { background: var(--acil-koyu); border-color: var(--acil-koyu); }
 
+/* ---------- Giriş ekranı ---------- */
+.giris-paneli {
+  display: flex;
+  justify-content: center;
+  margin-top: 6vh;
+}
+.giris-kutu {
+  width: 100%;
+  max-width: 380px;
+  background: var(--kart);
+  border: 1px solid var(--sinir);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: 32px 28px;
+  text-align: center;
+}
+.giris-baslik {
+  font-family: var(--font-baslik);
+  font-size: 18px;
+  line-height: 1.35;
+  margin: 0 0 6px;
+  color: var(--metin);
+}
+.giris-alt-baslik {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--primer-koyu);
+  margin: 0 0 20px;
+}
+.giris-kutu .uyari-guvenlik { text-align: left; margin-bottom: 18px; }
+.giris-kutu #baglanti-form { text-align: left; }
+.giris-kutu #baglanti-form label { font-size: 13.5px; }
+
 /* ---------- Ana sayfaya git çubuğu / sekmeler ---------- */
 .admin-ust-cubuk {
   max-width: 680px;
